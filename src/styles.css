@@ -251,21 +251,9 @@ input {
   color: #ffffff !important;
 }
 
-/* Banner en la parte superior */
-#banner {
-  width: 100%;
-  height: 300px; /* altura escritorio */
-  background: url('assets/images/banner5.png') center center no-repeat;
-  background-size: cover; /* siempre cubre todo el div */
-  border-radius: 12px;    /* opcional */
-}
 
-@media (max-width: 768px) {
-  #banner {
-    height: 200px; /* menos altura en móviles */
-    background-position: top center;
-  }
-}
+
+
 
 /* =============================
    SNACKBAR
@@ -277,35 +265,6 @@ input {
   font-weight: 500;
 }
 
-/* =============================
-   RESPONSIVE
-============================= */
 
-
-@media (max-width: 768px) {
-  #banner {
-    height: 200px; /* altura más pequeña en tablet y móvil */
-  }
-
-  .banner-button img {
-    width: 120px;
-  }
-
-  .tab-header-extra {
-    font-size: 0.8rem;
-    top: 8px;
-    right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  #banner {
-    height: 150px; /* altura móvil */
-  }
-
-  .banner-button img {
-    width: 100px;
-  }
-}
 
 
