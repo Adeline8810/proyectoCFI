@@ -1,0 +1,168 @@
+/* =====================================================
+   DIALOG FORM - ESTILO AZUL CORPORATIVO
+   ===================================================== */
+
+.dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(15, 35, 60, 0.45); /* overlay azul oscuro elegante */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.user-form-card {
+  background: linear-gradient(180deg, #ffffff, #f4f7fb);
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 40, 85, 0.15);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Animación más sobria */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-icon {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 0.6rem;
+  filter: hue-rotate(180deg) saturate(0.8); /* tono azulado */
+}
+
+.form-header h2 {
+  font-size: 1.8rem;
+  color: #1f3a5f;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Cuerpo */
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Cada campo */
+.campo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+  color: #2c4a73;
+  margin-bottom: 0.4rem;
+  text-align: left;
+  width: 85%;
+  font-size: 0.95rem;
+}
+
+/* Grupo input */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #eef3f9;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #d6e2f0;
+  width: 85%;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-group:hover {
+  border-color: #1f4e79;
+  box-shadow: 0 0 0 2px rgba(31, 78, 121, 0.1);
+}
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.6rem;
+  opacity: 0.7;
+  filter: hue-rotate(180deg);
+}
+
+input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #1f2d3d;
+}
+
+/* Botones */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Botón principal */
+.btn-guardar {
+  background: linear-gradient(135deg, #1f4e79, #163a5c);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-guardar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 40, 85, 0.25);
+}
+
+/* Botón secundario */
+.btn-cancelar {
+  background-color: transparent;
+  color: #1f4e79;
+  border: 2px solid #1f4e79;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-cancelar:hover {
+  background-color: #eef3f9;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .user-form-card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .input-group,
+  label {
+    width: 95%;
+  }
+}

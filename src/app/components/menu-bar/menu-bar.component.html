@@ -1,0 +1,388 @@
+<div class="banner-wrapper">
+
+  <div id="banner"></div>
+
+  <div class="banner-button">
+    <a href="https://my.anydesk.com/v2/api/v2/custom-clients/downloads/public/QGIDX3XKCJYV/Anydesk-QS-CFI.exe"
+       target="_blank">
+      <img src="assets/images/dl-btn-wb-small.png"
+           alt="Télécharger AnyDesk">
+    </a>
+  </div>
+
+    <div class="tab-header-extra">
+    {{ today | date: 'fullDate':'':'fr-FR' }}
+  </div>
+
+</div>
+
+<div class="tabs-wrapper">
+
+
+
+
+<mat-tab-group>
+
+  <mat-tab label="Accueil">
+    <div class="tab-content">
+
+<h2 class="tab-main-title">Le mot du dirigeant</h2>
+
+
+      <h3>C.F.I.</h3>
+
+      <p>CFI, votre partenaire Cantalien pour l'Informatique, la Bureautique et l'Encaissement.
+      Notre magasin est ouvert du lundi au vendredi de 8h30 à 12h et de 13h30 à 19h00</p>
+
+      <p>Interlocuteur des PMI/PME et artisans, nous sommes à même de vous proposer des solutions techniques innovantes et fiables du style Gestion Informatique et Sécurisé de Sites Distants, Publication d’Agendas Centralisés sur Internet (via la Société NET15), Réseaux Sans Fil connectés à des réseaux serveurs et la gestion de Parc Informatique et Bureautique importants.</p>
+
+      <p>Entreprise de SERVICES de PROXIMITE, nous sommes également à votre disposition pour toute étude d’Assistance et de Conseil de « Politique Informatique » ainsi que pour la réalisation de programmes spécifiques de Gestion et de Solutions Informatiques (avec étude de Cahier des Charges)</p>
+
+      <p>Nous avons enfin à notre disposition une salle de formation équipée de 15 postes très récents en réseau pour toute formation Internet, Bureautique, Imagerie et autres à la demande.</p>
+
+      <p>Le service complet, vous dis-je !</p>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Services">
+    <div class="tab-content">
+      <h2 class="tab-main-title">Services</h2>
+      <h3>CONSEIL AVANT VENTE</h3>
+
+      <p>L'équipe technico-commerciale est à votre service pour vous aider à définir la meilleure solution à apporter à vos besoins en fonction des paramètres de votre société.</p>
+
+      <h3>INSTALLATION</h3>
+      <p>Nos techniciens prennent en charge toutes les phases de votre réalisation : Mise en place sur site</p>
+      <ul>
+        <li>Préparation en atelier pour les serveurs, postes et copieurs</li>
+        <li>Récupération de vos données</li>
+        <li>Installation des logiciels</li>
+        <li>Réalisation de tous les paramétrages</li>
+        <li>Mise en place sur site</li>
+      </ul>
+
+      <h3>ASSISTANCE CLIENT</h3>
+      <p>Nous avons mis en place un contrat d'assistance qui vous garantit X heures de technicien qualifié par mois pour vous apporter un réel confort et la tranquilité dans l'utilisation de votre outil informatique.</p>
+
+      <h3>SERVICE APRES VENTE</h3>
+      <p>Nos techniciens se forment régulièrement afin de vous apporter le meilleur service possible.</p>
+
+      <p>AnyDesk</p>
+      <ul>
+        <li><a href="https://get.anydesk.com/Mi0mk1AI/AnyDesk_QS.exe" target="_blank">Quick Support</a></li>
+        <li><a href="https://anydesk.com/fr/downloads/windows" target="_blank">Assistance en ligne</a></li>
+        <li><a href="https://anydesk.com/fr" target="_blank">AnyDesk, site officiel</a></li>
+      </ul>
+
+      <p>Un technicien vient chez vous en 10 secondes et vous apporte assistance sans que ayez à installer quoi que ce soit et en toute sécurité.</p>
+
+      <h3>DOMAINES</h3>
+      <p>Un certains nombre de domaines Internet en FR sont disponibles en ventes sur notre site web dédié.</p>
+
+      <h3>OUTILS</h3>
+      <p>Voici un ensemble d'informations utiles mises à votre disposition :</p>
+      <ul>
+        <li><a href="https://www.cfi15.fr/divers.php#adrip" target="_blank">MON ADRESSE IP</a></li>
+        <p>Ce lien vous permet de connaître votre adresse IP publique - côté Internet.</p>
+        <li><a href="https://www.cfi15.fr/divers.php#adrip" target="_blank">MON NAVIGATEUR WEB</a></li>
+        <p>Ce lien vous permet de connaître la dénomination de votre navigateur web - du point de vue des serveurs web.</p>
+      </ul>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Informatique">
+    <div class="tab-content">
+       <h2 class="tab-main-title">Présentation Informatique</h2>
+
+      <p>CFI, l'informatique en toute sérénité ! Nous offrons toute une gamme de prestations informatiques aux professionnels comme aux particuliers :</p>
+
+      <!-- Botón para mostrar Matériel -->
+      <button class="subtab-btn" (click)="showMaterial = true">Matériel</button>
+
+      <!-- Contenido principal de Informatique -->
+      <div *ngIf="!showMaterial">
+
+        <div class="media-container">
+          <img src="assets/images/materiel.jpg" alt="material" class="media-image">
+          <div class="media-content">
+            <h3>MATERIEL INFORMATIQUE</h3>
+            <p>Vous cherchez du matériel informatique de qualité adapté à vos besoins ? Nous sommes à même de vous proposer des PCs bureautiques, gamers, stations de travail, serveurs, portables et ultra portables. Faites nous connaître votre ou vos besoins !</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/logiciel1.jpg" alt="logiciel1" class="media-image">
+          <div class="media-content">
+            <h3>LOGICIELS BUREAUTIQUE - GESTION</h3>
+            <p>Référencé chez la plupart des éditeurs de logiciels : bureautique, gestion, paie etc. Nous avons la solution que vous attendez. Dites nous ce que vous recherchez !</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/logiciel2.jpg" alt="logiciel2" class="media-image">
+          <div class="media-content">
+            <h3>LOGICIELS SPECIFIQUES</h3>
+            <p>Par l'intermédiaire de notre partenaire Eriidan qui a pour vocation de s'adresser aux PME ainsi qu'aux départements informatiques des grosses sociétés, des administrations et institutions pour leurs besoins informatiques spécifiques.</p>
+            <p>Cette équipe de professionnels vous offre des solutions sur mesure pour vos besoins de développement informatique :</p>
+            <ul>
+              <li>Gestion de projet (encadrement, phase d'étude, cahier des charges, etc.)</li>
+              <li>Plusieurs langages de programmation</li>
+              <li>Bases de données</li>
+              <li>Tests et validation</li>
+              <li>Migrations de données</li>
+              <li>Formation et conseil</li>
+              <li>Assistance et maintenance</li>
+              <li>Audits</li>
+              <li>Expertises</li>
+            </ul>
+            <p>Pour répondre aux besoins spécifiques de chaque entreprise, nous assurons la conception et la réalisation sur mesure d'une partie ou de la totalité de votre système informatique avec la possibilité de se rattacher à un ou plusieurs prologiciels déjà existants.</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/maintenance.jpg" alt="maintenance" class="media-image">
+          <div class="media-content">
+            <h3>MAINTENANCE INFORMATIQUE</h3>
+            <p>Votre ordinateur fonctionne mal ou votre connexion ADSL est en panne ? Nous intervenons sur site dans les plus brefs délais (éventuellement dans le cadre d'un contrat d'assistance) car nous savons que pour vous, un outil informatique opérationnel est aujourd'hui vital pour être productif et concurrentiel !</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/formation.jpg" alt="formation" class="media-image">
+          <div class="media-content">
+            <h3>FORMATION INFORMATIQUE</h3>
+            <p>Vous avez besoin d'une formation pour prendre en main votre ordinateur ou pour vous perfectionner ? CFI est un Centre de Formation Agréé N° 83 15 00 494 15 et vous enseignera la bureautique (traitement de texte, tableur), la navigation sur internet ou l'utilisation de votre messagerie électronique, et plus particulièrement pour les professionnels.</p>
+
+            <ul>
+              <li>Gestion commerciale</li>
+              <li>Gestion de paie</li>
+              <li>Gestion d'encaissement</li>
+              <li>Gestion de production</li>
+              <li>Etc.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/cfi_site.jpg" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>UN PARTENAIRE INFORMATIQUE</h3>
+            <p>Dans tous les domaines de l'informatique, CFI est votre partenaire pour vous conseiller et pour vous permettre d'aller de l'avant en toute sérénité ! N'hésitez pas à nous conctater, nous sommes à votre disposition afin de répondre et vous assister dans vos difficultés.....</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contenido Matériel -->
+      <div *ngIf="showMaterial">
+        <!-- Tu contenido de Material aquí (no lo repito para abreviar) -->
+
+
+
+
+
+        <button class="subtab-btn" (click)="showMaterial = false">Retour</button>
+      </div>
+
+    </div>
+  </mat-tab>
+
+<mat-tab label="Bureautique">
+  <div class="tab-content">
+<h2 class="tab-main-title">Bureautique</h2>
+    <!-- SUBMENU SIEMPRE VISIBLE -->
+    <div class="bureautique-menu">
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === null"
+              (click)="showBureautiqueOption = null">
+        Bureautique
+      </button>
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === 'option1'"
+              (click)="showBureautiqueOption = 'option1'">
+        Triumph-Adler
+      </button>
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === 'option2'"
+              (click)="showBureautiqueOption = 'option2'">
+        Brother
+      </button>
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === 'option3'"
+              (click)="showBureautiqueOption = 'option3'">
+        Sharp
+      </button>
+
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div *ngIf="showBureautiqueOption === null">
+
+      <p>Spécialisé dans l'environnement Bureautique, CFI propose à travers de ses compétences, une offre Multi-Produits, Multi-Marques, Multi-Services.</p>
+      <p>La gamme des produits proposés par CFI comprend tous les grands noms de la bureautique moderne.</p>
+
+      <ul>
+        <li>TRIUMPH-ADLER</li>
+        <li>BROTHER</li>
+        <li>SHARP</li>
+      </ul>
+
+      <p>Les priorités de CFI :</p>
+      <ul>
+        <li>être à l'écoute de vos besoins</li>
+        <li>Analyser et réfléchir à une solution</li>
+        <li>Vous proposer la meilleure solution pour votre entreprise</li>
+      </ul>
+
+      <p>Avec CFI, la maintenance de votre parc est une garantie, nous sommes mainteneur agréé BROTHER et SHARP. Nous nous engageons à vous faire bénéficier :</p>
+      <ul>
+        <li>de toutes les garanties constructeurs</li>
+        <li>de toutes les extensions de garantie</li>
+        <li>d'interventions sur site avec une maintenance assurée par un technicien agréé et formé</li>
+      </ul>
+
+    </div>
+
+    <!-- TRIUMP-ADLER -->
+    <div *ngIf="showBureautiqueOption === 'option1'" class="bureautique-full-images">
+
+      <h3>Triumph-Adler</h3>
+
+      <img src="assets/images/ta_3061i.jpg"
+           alt="Triumph Adler 3061i"
+           class="full-image">
+
+      <img src="assets/images/ta_iris.jpg"
+           alt="Triumph Adler Iris"
+           class="full-image">
+
+    </div>
+
+    <!-- BROTHER -->
+    <div *ngIf="showBureautiqueOption === 'option2'">
+
+      <h3>Brother</h3>
+
+      <div class="brand-center-image">
+        <img src="assets/images/bureautique2.gif"
+             alt="bureautique2"
+             class="brand-main-image">
+      </div>
+
+      <div class="media-container">
+        <img src="assets/images/logo_brother.gif" alt="logo_brother" class="media-image">
+        <div class="media-content">
+          <h3>Brother</h3>
+          <p>À l'heure du tout numérique et de la génération du tout écran, BROTHER invente et développe des produits pour que chacun puisse imprimer, numériser, télécopier, copier,
+          étiqueter... en somme laisser, sur le papier, sa plus belle empreinte possible.</p>
+
+          <p>Or vous n'imaginez pas ce qu'il y a derrière une empreinte BROTHER. Il y a des produits, des consommables et des services adaptés à chacun de nos clients. Il y a aussi des hommes et des femmes de talent, disponibles et attentifs. Il y a surtout une philosophie : « At your side ».</p>
+
+          <h3>« At your side » est bien plus qu'une profession de foi !</h3>
+          <p>C'est promouvoir une culture et une organisation d'entreprise entièrement tournée vers le client. C'est savoir recommander le bon produit et offrir des services à forte valeur ajoutée pour simplifier la vie des utilisateurs et maîtriser les coûts d'impression. C'est enfin imaginer toutes les solutions pour des produits sûrs et respectueux de l'environnement à chaque étape de leur cycle de vie.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SHARP -->
+    <div *ngIf="showBureautiqueOption === 'option3'">
+
+      <h3>Sharp</h3>
+
+      <div class="brand-center-image">
+        <img src="assets/images/mx2300n.gif"
+             alt="sharp"
+             class="brand-main-image sharp-main-image">
+      </div>
+
+      <div class="media-container">
+        <img src="assets/images/logo_sharp.jpg" alt="sharp" class="media-image">
+        <div class="media-content">
+          <h3>Présentation Sharp</h3>
+          <p>La clé de voute de la communication de votre organisation.</p>
+
+          <p>Du photocopieur A4 au A3, de l'impression monochrome à la couleur, de 15 pages par minute à 50 pages par minute :</p>
+
+          <ul>
+            <li>Productivité en impression et copie</li>
+            <li>Puissante numérisation réseau</li>
+            <li>Options de Finition professionnelles</li>
+            <li>Fonctions complètes de sécurité</li>
+            <li>Document filing (classement de documents)</li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</mat-tab>
+
+
+
+  <mat-tab label="Contact">
+    <div class="tab-content contact-content">
+      <h2 class="tab-main-title">Contact</h2>
+      <div class="contact-item">
+        <img src="assets/images/con_fax.png" alt="Email" class="contact-icon">
+        <a href="#">contact@cfi15.fr</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="assets/images/con_address.png" alt="Adresse Aurillac" class="contact-icon">
+        <div>
+          <strong>CFI-M Aurillac</strong><br>
+          5 rue Jacques Prévert<br>
+          15000 Aurillac
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <img src="assets/images/con_tel.png" alt="Téléphone Aurillac" class="contact-icon">
+        <div>04 71 64 81 06</div>
+      </div>
+
+      <div class="contact-item">
+        <img src="assets/images/con_address.png" alt="Adresse Figeac" class="contact-icon">
+        <div>
+          <strong>CFI-M Figeac</strong><br>
+          11 Avenue du Général de Gaulle<br>
+          46100 Figeac
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <img src="assets/images/con_tel.png" alt="Téléphone Figeac" class="contact-icon">
+        <div>04 71 43 35 36</div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+</div>
+
+<!-- CSS sugerido para Triumph-Adler -->
+<style>
+.bureautique-full-images {
+  text-align: center;
+  padding: 20px;
+}
+
+.full-image-container {
+  margin: 20px 0;
+}
+
+.full-image {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+</style>
