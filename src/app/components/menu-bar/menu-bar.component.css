@@ -654,3 +654,13 @@ brand-main-image
 .tab-content li a {
   display: inline-block;
 }
+
+.email-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
