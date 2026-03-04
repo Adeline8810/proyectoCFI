@@ -254,17 +254,10 @@ input {
 /* Banner en la parte superior */
 #banner {
   width: 100%;
-  height: 250px; /* ajusta según tu imagen */
+  height: 300px; /* altura escritorio */
   background: url('assets/images/banner5.png') center center no-repeat;
-  background-size: cover; /* ajusta para cubrir todo el div */
-}
-
-#banner {
-  width: 100%;
-  height: auto;
-  min-height: 200px; /* mínimo por si es muy pequeña */
-  background: url('assets/images/banner5.png') top center no-repeat;
-  background-size: contain;
+  background-size: cover; /* siempre cubre todo el div */
+  border-radius: 12px;    /* opcional */
 }
 
 @media (max-width: 768px) {
@@ -288,13 +281,31 @@ input {
    RESPONSIVE
 ============================= */
 
-@media (max-width: 480px) {
-  .user-form-card {
-    width: 95%;
-    padding: 1.5rem;
+
+@media (max-width: 768px) {
+  #banner {
+    height: 200px; /* altura más pequeña en tablet y móvil */
   }
 
-  .input-group, label {
-    width: 95%;
+  .banner-button img {
+    width: 120px;
+  }
+
+  .tab-header-extra {
+    font-size: 0.8rem;
+    top: 8px;
+    right: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  #banner {
+    height: 150px; /* altura móvil */
+  }
+
+  .banner-button img {
+    width: 100px;
+  }
+}
+
+
