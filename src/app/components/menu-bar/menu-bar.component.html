@@ -29,11 +29,8 @@
   <mat-tab label="Accueil">
     <div class="tab-content">
 
-<h2 class="tab-main-title">Le mot du dirigeant</h2>
-
-
       <h3>C.F.I.</h3>
-
+      Le mot du dirigeant
       <p>CFI, votre partenaire Cantalien pour l'Informatique, la Bureautique et l'Encaissement.
       Notre magasin est ouvert du lundi au vendredi de 8h30 à 12h et de 13h30 à 19h00</p>
 
@@ -45,17 +42,27 @@
 
       <p>Le service complet, vous dis-je !</p>
     </div>
+
+     <div class="acc-center-image">
+        <img src="assets/images/signature_dm.gif"
+             alt="signature"
+             class="brand-main-image">
+      </div>
+
+
+
   </mat-tab>
 
   <mat-tab label="Services">
     <div class="tab-content">
-      <h2 class="tab-main-title">Services</h2>
+
       <h3>CONSEIL AVANT VENTE</h3>
 
       <p>L'équipe technico-commerciale est à votre service pour vous aider à définir la meilleure solution à apporter à vos besoins en fonction des paramètres de votre société.</p>
 
       <h3>INSTALLATION</h3>
       <p>Nos techniciens prennent en charge toutes les phases de votre réalisation : Mise en place sur site</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
         <li>Préparation en atelier pour les serveurs, postes et copieurs</li>
         <li>Récupération de vos données</li>
@@ -63,7 +70,7 @@
         <li>Réalisation de tous les paramétrages</li>
         <li>Mise en place sur site</li>
       </ul>
-
+</div>
       <h3>ASSISTANCE CLIENT</h3>
       <p>Nous avons mis en place un contrat d'assistance qui vous garantit X heures de technicien qualifié par mois pour vous apporter un réel confort et la tranquilité dans l'utilisation de votre outil informatique.</p>
 
@@ -71,12 +78,13 @@
       <p>Nos techniciens se forment régulièrement afin de vous apporter le meilleur service possible.</p>
 
       <p>AnyDesk</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
         <li><a href="https://get.anydesk.com/Mi0mk1AI/AnyDesk_QS.exe" target="_blank">Quick Support</a></li>
         <li><a href="https://anydesk.com/fr/downloads/windows" target="_blank">Assistance en ligne</a></li>
         <li><a href="https://anydesk.com/fr" target="_blank">AnyDesk, site officiel</a></li>
       </ul>
-
+      </div>
       <p>Un technicien vient chez vous en 10 secondes et vous apporte assistance sans que ayez à installer quoi que ce soit et en toute sécurité.</p>
 
       <h3>DOMAINES</h3>
@@ -84,26 +92,42 @@
 
       <h3>OUTILS</h3>
       <p>Voici un ensemble d'informations utiles mises à votre disposition :</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
         <li><a href="https://www.cfi15.fr/divers.php#adrip" target="_blank">MON ADRESSE IP</a></li>
         <p>Ce lien vous permet de connaître votre adresse IP publique - côté Internet.</p>
         <li><a href="https://www.cfi15.fr/divers.php#adrip" target="_blank">MON NAVIGATEUR WEB</a></li>
         <p>Ce lien vous permet de connaître la dénomination de votre navigateur web - du point de vue des serveurs web.</p>
       </ul>
+      </div>
     </div>
   </mat-tab>
 
   <mat-tab label="Informatique">
     <div class="tab-content">
-       <h2 class="tab-main-title">Présentation Informatique</h2>
+       <!-- <h2 class="tab-main-title">Présentation Informatique</h2> -->
 
       <p>CFI, l'informatique en toute sérénité ! Nous offrons toute une gamme de prestations informatiques aux professionnels comme aux particuliers :</p>
 
       <!-- Botón para mostrar Matériel -->
-      <button class="subtab-btn" (click)="showMaterial = true">Matériel</button>
+    <div class="bureautique-menu">
+
+	 <button class="subtab-btn"
+              [class.active-subtab]="!showMaterial"
+              (click)="showMaterial = false">Informatique</button>
+
+
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showMaterial"
+              (click)="showMaterial = true"> Matériel</button>
+
+
+
+    </div>
 
       <!-- Contenido principal de Informatique -->
-      <div *ngIf="!showMaterial">
+      <div *ngIf="!showMaterial" class="brand-content-fade">
 
         <div class="media-container">
           <img src="assets/images/materiel.jpg" alt="material" class="media-image">
@@ -127,6 +151,7 @@
             <h3>LOGICIELS SPECIFIQUES</h3>
             <p>Par l'intermédiaire de notre partenaire Eriidan qui a pour vocation de s'adresser aux PME ainsi qu'aux départements informatiques des grosses sociétés, des administrations et institutions pour leurs besoins informatiques spécifiques.</p>
             <p>Cette équipe de professionnels vous offre des solutions sur mesure pour vos besoins de développement informatique :</p>
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
             <ul>
               <li>Gestion de projet (encadrement, phase d'étude, cahier des charges, etc.)</li>
               <li>Plusieurs langages de programmation</li>
@@ -138,6 +163,7 @@
               <li>Audits</li>
               <li>Expertises</li>
             </ul>
+            </div>
             <p>Pour répondre aux besoins spécifiques de chaque entreprise, nous assurons la conception et la réalisation sur mesure d'une partie ou de la totalité de votre système informatique avec la possibilité de se rattacher à un ou plusieurs prologiciels déjà existants.</p>
           </div>
         </div>
@@ -155,7 +181,7 @@
           <div class="media-content">
             <h3>FORMATION INFORMATIQUE</h3>
             <p>Vous avez besoin d'une formation pour prendre en main votre ordinateur ou pour vous perfectionner ? CFI est un Centre de Formation Agréé N° 83 15 00 494 15 et vous enseignera la bureautique (traitement de texte, tableur), la navigation sur internet ou l'utilisation de votre messagerie électronique, et plus particulièrement pour les professionnels.</p>
-
+          <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
             <ul>
               <li>Gestion commerciale</li>
               <li>Gestion de paie</li>
@@ -163,6 +189,7 @@
               <li>Gestion de production</li>
               <li>Etc.</li>
             </ul>
+            </div>
           </div>
         </div>
 
@@ -177,9 +204,77 @@
       </div>
 
       <!-- Contenido Matériel -->
-      <div *ngIf="showMaterial">
+      <div *ngIf="showMaterial"  class="brand-content-fade">
         <!-- Tu contenido de Material aquí (no lo repito para abreviar) -->
-        <button class="subtab-btn" (click)="showMaterial = false">Retour</button>
+
+        <h3>Matériel informatique </h3>
+         <div class="materialInfo-center-image">
+         <img src="assets/images/materiel2.jpg"
+             alt="materiel2"
+             class="materialInfo-main-image">
+        </div>
+
+           <div class="media-container">
+          <img src="assets/images/logo_terra.jpg" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>TERRA</h3>
+            <p>TERRA, des solutions complètes répondant aux exigences les plus diverses :</p>
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+            <ul>
+              <li>PC Bureautique</li>
+              <li>PC Gamer</li>
+              <li>PC Portable</li>
+              <li>Client Léger</li>
+              <li>Station de Travail</li>
+              <li>Serveur</li>
+              <li>Ecran</li>
+              <li>et matériel divers</li>
+            </ul>
+            </div>
+<p>Les produits TERRA sont non seulement d'un rapport qualité/prix exceptionnel, mais ils se distinguent aussi par leur technologie d'exception et leur niveau de performance. Tout ce que à quoi un client exigeant comme vous peut s'attendre.</p>
+          </div>
+        </div>
+
+
+        <div class="media-container">
+          <img src="assets/images/logo_nec.gif" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>NEC</h3>
+            <p>Les serveurs NEC sont parfaitement équipés pour faire fonctionner les applications informatiques allant des plus simples aux plus complexes (serveurs de fichiers, déploiement d’applications web/messagerie, infrastructure réseau, applications avec base de données (ERP/ CRM), applications métier, solution de virtualisation et consolidation…). Ils répondent aux besoins en constante évolution des petites et moyennes entreprises ainsi qu’aux grandes organisations notamment celle du secteur de la santé et de l’éducation.</p>
+            <p>Ils offrent un niveau de performance, une sécurité et une flexibilité jamais égalée dans cette gamme de prix, ils sont également plus économiques et plus simples à exploiter, intégrant en standard des systèmes RAID, ainsi que de véritables solutions d’administration.</p>
+            <p>La gamme serveur NEC répond parfaitement aux utilisateurs à la recherche de :</p>
+ <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+            <ul>
+              <li>Performance accrue</li>
+              <li>Sécurité et Disponibilité continue des applications</li>
+              <li>Flexibilité pour soutenir les évolutions des besoins</li>
+              <li>Maitrise des coûts, tels que les coûts de conception, planification, mise en place, matériels, logiciels, infrastructure, maintenance</li>
+              <li>Manageabilité pour facilité d'administration</li>
+            </ul>
+</div>
+          </div>
+        </div>
+
+          <div class="media-container">
+          <img src="assets/images/logo_toshiba.gif" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>Toshiba</h3>
+            <p>Si au premier abord, tous les portables se ressemblent, leurs caractéristiques peuvent être très différentes et répondent à des usages spécifiques. Les portables Toshiba sont conçus pour répondre aux besoins des professionnels, des familles, mais aussi des étudiants ou encore des professionnels très mobiles.</p>
+
+          </div>
+        </div>
+
+           <div class="media-container">
+          <img src="assets/images/logo_samsung.jpg" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>Samsung</h3>
+            <p>Samsung propose une gamme d'ordinateur portable variée, allant du mini notebook de 10 pouces jusqu'au 17 pouces, mais aussi de 1 à 3 Kg pour une capacité de stockage de 160 à 320 Go. Vous trouverez obligatoirement le PC que vous recherchez !</p>
+
+          </div>
+        </div>
+
+
+
       </div>
 
     </div>
@@ -187,7 +282,7 @@
 
 <mat-tab label="Bureautique">
   <div class="tab-content">
-<h2 class="tab-main-title">Bureautique</h2>
+<!--<h2 class="tab-main-title">Bureautique</h2>-->
     <!-- SUBMENU SIEMPRE VISIBLE -->
     <div class="bureautique-menu">
 
@@ -222,27 +317,29 @@
 
       <p>Spécialisé dans l'environnement Bureautique, CFI propose à travers de ses compétences, une offre Multi-Produits, Multi-Marques, Multi-Services.</p>
       <p>La gamme des produits proposés par CFI comprend tous les grands noms de la bureautique moderne.</p>
-
+<div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
         <li>TRIUMPH-ADLER</li>
         <li>BROTHER</li>
         <li>SHARP</li>
       </ul>
-
+</div>
       <p>Les priorités de CFI :</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
         <li>être à l'écoute de vos besoins</li>
         <li>Analyser et réfléchir à une solution</li>
         <li>Vous proposer la meilleure solution pour votre entreprise</li>
       </ul>
-
+</div>
       <p>Avec CFI, la maintenance de votre parc est une garantie, nous sommes mainteneur agréé BROTHER et SHARP. Nous nous engageons à vous faire bénéficier :</p>
+     <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
         <li>de toutes les garanties constructeurs</li>
         <li>de toutes les extensions de garantie</li>
         <li>d'interventions sur site avec une maintenance assurée par un technicien agréé et formé</li>
       </ul>
-
+</div>
     </div>
 
     <!-- TRIUMP-ADLER -->
@@ -261,11 +358,11 @@
     </div>
 
     <!-- BROTHER -->
-    <div *ngIf="showBureautiqueOption === 'option2'">
+    <div *ngIf="showBureautiqueOption === 'option2'" class="brand-section">
 
-      <h3>Brother</h3>
+      <h3>Brother </h3>
 
-      <div class="brand-center-image">
+      <div class="brother-center-image">
         <img src="assets/images/bureautique2.gif"
              alt="bureautique2"
              class="brand-main-image">
@@ -305,7 +402,7 @@
           <p>La clé de voute de la communication de votre organisation.</p>
 
           <p>Du photocopieur A4 au A3, de l'impression monochrome à la couleur, de 15 pages par minute à 50 pages par minute :</p>
-
+<div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
           <ul>
             <li>Productivité en impression et copie</li>
             <li>Puissante numérisation réseau</li>
@@ -313,7 +410,7 @@
             <li>Fonctions complètes de sécurité</li>
             <li>Document filing (classement de documents)</li>
           </ul>
-
+</div>
         </div>
       </div>
 
@@ -326,7 +423,7 @@
 
   <mat-tab label="Contact">
     <div class="tab-content contact-content">
-      <h2 class="tab-main-title">Contact</h2>
+
       <div class="contact-item">
         <img src="assets/images/con_fax.png" alt="Email" class="contact-icon">
         <a href="#">contact@cfi15.fr</a>

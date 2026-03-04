@@ -209,25 +209,13 @@
 
 
 
-.brother-main-image {
-  max-width: 700px;   /* tamaño grande */
-  width: 100%;
-  height: auto;
-}
+
 
 .brother-download img {
   height: auto;       /* conserva tamaño original */
   width: auto;
 }
 
-
-
-
-.sharp-main-image {
-  max-width: 200px;   /* tamaño grande */
-  width: 100%;
-  height: auto;
-}
 
 .anydesk-global {
   position: fixed;
@@ -359,18 +347,8 @@
   text-align: center;
 }
 
-.brand-center-image {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
 
-.brand-main-image {
-  max-width: 800px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
+
 
 /* IMAGENES CENTRADAS */
 .brand-center-image {
@@ -379,14 +357,37 @@
   margin: 20px 0;
 }
 
-.brand-main-image {
-  max-width: 800px;
+.brother-center-image {
+  display: flex;
+  justify-content: center;
+
+  width: 800px;
   width: 100%;
-  height: auto;
+
 }
 
+.acc-center-image {
+  display: flex;
+  justify-content: center;
+
+  width: 800px;
+  width: 100%;
+
+}
+
+.materialInfo-center-image {
+  display: flex;
+  justify-content: center;
+  width: 800px; /* ajusta este valor al tamaño deseado */
+  width: 100%;
+
+}
+
+brand-main-image
+
+
 .sharp-main-image {
-  max-width: 300px; /* ajusta este valor al tamaño deseado */
+  max-width: 200px; /* ajusta este valor al tamaño deseado */
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -477,4 +478,179 @@
 
 .toolbar-date {
   font-size: 0.85rem;
+}
+
+
+/* === H2: Estilo "Glass" Profesional === */
+.tab-content h2.tab-main-title {
+  font-size: 1.4rem;            /* Tamaño equilibrado, ni muy grande ni muy pequeño */
+  font-weight: 600;
+  color: #1a3a5a;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  /* Diseño de la caja */
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 12px 25px;
+  border-radius: 6px;
+
+  /* Sombra suave y profesional (estilo h3 pero adaptado a h2) */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Detalle de acento superior e inferior */
+  border-top: 2px solid #1f4e79;
+  border-bottom: 1px solid #e2e8f0;
+
+  /* Para que no desperdicie espacio a los lados */
+  display: table;               /* Se ajusta al ancho del texto */
+  margin: 20px auto 35px auto;  /* Centrado con espacio alrededor */
+  max-width: 90%;               /* Seguridad para móviles */
+}
+
+
+/* === H3: El Subtítulo Profesional y "Bonito" === */
+.tab-content h3 {
+  color: #2c5282; /* Un azul un poco más vibrante pero serio */
+  font-size: 1.15rem; /* Tamaño contenido y elegante */
+  font-weight: 600;
+  margin: 30px 0 15px 0;
+  padding: 4px 12px;
+  background: linear-gradient(90deg, #f0f4f8 0%, rgba(255,255,255,0) 100%);
+  border-left: 4px solid #1f4e79; /* Un detalle de color firme */
+  display: inline-block; /* Para que el fondo no cruce toda la pantalla */
+  width: 100%; /* Opcional: quítalo si quieres que el fondo solo abrace el texto */
+  border-radius: 0 4px 4px 0;
+}
+
+.tab-content p, .tab-content ul {
+  padding-left: 15px; /* Alineado con el inicio del texto del H3 */
+  color: #4a5568;
+}
+
+.brand-main-image {
+  max-width: 250px;           /* Evita que la imagen abrume el texto */
+  width: 100%;
+  height: auto;
+  filter: grayscale(10%);     /* Un toque sutil de desaturación da seriedad */
+  transition: filter 0.3s;
+  margin: 20px 0;
+}
+
+.materialInfo-main-image {
+  max-width: 350px;           /* Evita que la imagen abrume el texto */
+  width: 100%;
+  height: auto;
+  filter: grayscale(10%);     /* Un toque sutil de desaturación da seriedad */
+  transition: filter 0.3s;
+  margin: 20px 0;
+}
+
+.brand-main-image:hover {
+  filter: grayscale(0%);      /* Recupera color al pasar el ratón */
+}
+
+/* Variante para cuando el título está centrado (opcional) */
+.brand-section h3 {
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* Contenedor de cada marca */
+.brand-content-fade {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Listas Desordenadas (UL) --- */
+.tab-content ul {
+  list-style: none;         /* Quitamos el punto negro feo */
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.tab-content li {
+  position: relative;
+  padding: 8px 0 8px 25px;  /* Espacio para el icono */
+  color: #4a5568;           /* Gris elegante */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-bottom: 1px solid #f1f5f9; /* Línea divisoria muy tenue */
+}
+
+/* El "punto" personalizado: un cuadrado pequeño de color corporativo */
+.tab-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;                /* Centrado con el texto */
+  width: 8px;
+  height: 8px;
+  background-color: #1f4e79;
+  border-radius: 2px;       /* Cuadrado ligeramente redondeado */
+  opacity: 0.7;
+}
+
+/* --- Listas Ordenadas (OL) --- */
+.tab-content ol {
+  counter-reset: my-counter; /* Contador personalizado */
+  list-style: none;
+  padding-left: 20px;
+}
+
+.tab-content ol li::before {
+  counter-increment: my-counter;
+  content: counter(my-counter); /* Muestra el número */
+  font-weight: bold;
+  color: #1f4e79;
+  font-size: 0.8rem;
+  background: #e3edf7;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* --- Enlaces Profesionales --- */
+.tab-content a {
+  color: #1f4e79;           /* Azul de tu marca */
+  text-decoration: none;    /* Sin subrayado fijo */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 2px;
+}
+
+/* La línea que aparece al hacer hover */
+.tab-content a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2563eb; /* Azul más brillante */
+  transition: width 0.3s ease;
+}
+
+.tab-content a:hover {
+  color: #2563eb;
+}
+
+.tab-content a:hover::after {
+  width: 100%; /* La línea crece de izquierda a derecha */
+}
+
+/* Enlaces tipo "Botón de acción" (como los de AnyDesk en tu lista) */
+.tab-content li a {
+  display: inline-block;
 }
