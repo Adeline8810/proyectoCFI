@@ -95,29 +95,31 @@
       <p>Voici un ensemble d'informations utiles mises à votre disposition :</p>
       <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
-       <li><a href="#" (click)="showTools = 'ip'">MON ADRESSE IP</a></li>
+       <li><a href="#" (click)="showTools = 'ip';changeTitle('Adresse IP')">MON ADRESSE IP</a></li>
         <p>Ce lien vous permet de connaître votre adresse IP publique - côté Internet.</p>
-        <li><a href="#" (click)="showTools = 'browser'">MON NAVIGATEUR WEB</a></li>
+        <li><a href="#" (click)="showTools = 'browser';changeTitle('Navigateur')">MON NAVIGATEUR WEB</a></li>
         <p>Ce lien vous permet de connaître la dénomination de votre navigateur web - du point de vue des serveurs web.</p>
       </ul>
       </div>
 </div>
        <div *ngIf="showTools" class="tools-section">
 
-      <button class="subtab-btn" (click)="showTools = null">
+      <button class="subtab-btn" (click)="showTools = null;changeTitle('Services')">
         ← Retour
       </button>
 
-  <div *ngIf="showTools === 'ip'" style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;" >
+  <div *ngIf="showTools === 'ip'" class="tool-result-wrapper" >
     <h3>Votre adresse</h3>
     <p>L'adresse IP publique du routeur public le plus proche de la machine que vous utilisez actuellement est :</p>
     <p class="info-box">80.11.234.191</p>
   </div>
 
-  <div *ngIf="showTools === 'browser'" style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+  <div *ngIf="showTools === 'browser'" class="tool-result-wrapper" >
     <h3>Votre navigateur</h3>
     <p>La dénomination du navigateur que vous utilisez actuellement pour visualiser cette page est :</p>
-    <p class="info-box">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36</p>
+    <div class="info-box">
+      Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+    </div>
   </div>
 
 </div>
@@ -139,13 +141,13 @@
 
 	 <button class="subtab-btn"
               [class.active-subtab]="!showMaterial"
-              (click)="showMaterial = false">Informatique</button>
+              (click)="showMaterial = false; changeTitle('Informatique')" >Informatique</button>
 
 
 
       <button class="subtab-btn"
               [class.active-subtab]="showMaterial"
-              (click)="showMaterial = true"> Matériel</button>
+              (click)="showMaterial = true; changeTitle('Matériel')"> Matériel</button>
 
 
 
@@ -313,26 +315,28 @@
 
       <button class="subtab-btn"
               [class.active-subtab]="showBureautiqueOption === null"
-              (click)="showBureautiqueOption = null">
+              (click)="showBureautiqueOption = null;changeTitle('Bureautique')">
         Bureautique
       </button>
 
-      <button class="subtab-btn"
-              [class.active-subtab]="showBureautiqueOption === 'option1'"
-              (click)="showBureautiqueOption = 'option1'">
-        Triumph-Adler
-      </button>
+     <button class="subtab-btn"
+        [class.active-subtab]="showBureautiqueOption === 'option1'"
+        (click)="showBureautiqueOption = 'option1'; changeTitle('Triumph-Adler')"> Triumph-Adler
+    </button>
 
       <button class="subtab-btn"
               [class.active-subtab]="showBureautiqueOption === 'option2'"
-              (click)="showBureautiqueOption = 'option2'">
-        Brother
+              (click)="showBureautiqueOption = 'option2';changeTitle('Brother')">Brother
+
       </button>
+
+
+
 
       <button class="subtab-btn"
               [class.active-subtab]="showBureautiqueOption === 'option3'"
-              (click)="showBureautiqueOption = 'option3'">
-        Sharp
+              (click)="showBureautiqueOption = 'option3';changeTitle('Sharp')">Sharp
+
       </button>
 
     </div>

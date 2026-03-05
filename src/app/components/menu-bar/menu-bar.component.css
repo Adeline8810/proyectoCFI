@@ -774,3 +774,36 @@ brand-main-image
     filter: brightness(1); /* estado normal */
   }
 }
+
+.tab-content h3,
+.tool-result-wrapper h3 {
+  color: #1f3a5f;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
+  padding: 8px 15px;
+  border-left: 4px solid #1f4e79; /* Esta es la línea azul vertical */
+  background: rgba(240, 244, 248, 0.6); /* Fondo gris tenue */
+  border-radius: 0 8px 8px 0;
+  display: block;
+  width: 100%;
+}
+
+/* Quitemos el fondo gris del div contenedor para que no se vea doble fondo */
+.tool-result-wrapper {
+  background: transparent !important;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Estilo para el cuadro de la IP (la cajita gris de abajo) */
+.info-box {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-weight: bold;
+  color: #1a3a5a;
+  border: 1px solid #e2e8f0;
+  margin-top: 10px;
+}

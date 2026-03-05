@@ -32,9 +32,10 @@ export class MenuBarComponent {
 
 
 
-changeTitle(tabName: string) {
-  this.titleService.setTitle('CFI - ' + tabName);
-}
+changeTitle(label: string) {
+    // Esto cambiará el texto de la pestaña del navegador
+    this.titleService.setTitle(`CFI - ${label}`);
+  }
 
 ngOnInit() {
   this.titleService.setTitle('CFI - Accueil');
