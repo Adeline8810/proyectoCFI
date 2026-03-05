@@ -686,7 +686,7 @@ brand-main-image
 
 p {
   text-align: justify; /* Justificado */
-  background-color: rgba(0, 0, 0, 0.03); /* Fondo tenue */
+  /*background-color: rgba(0, 0, 0, 0.03);  Fondo tenue */
   padding: 8px 12px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
   margin-bottom: 10px; /* Separación entre párrafos */
