@@ -811,48 +811,50 @@ brand-main-image
 
 
 /* --- El Banner Responsivo --- */
-/* --- Contenedor que da el aire y espacio --- */
+/* --- Contenedor --- */
 .banner-wrapper {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 15px auto;
-  padding: 0 15px; /* Espacio para que luzca el redondeado */
+  padding: 0 12px; /* Espacio para que el sombreado se vea bien */
   box-sizing: border-box;
 }
 
-/* --- El Banner (Estilo Redondeado de ayer) --- */
+/* --- El Banner (Igual a tu foto) --- */
 #banner {
   width: 100%;
-  /* Mantenemos la proporción fluida para que no se vea cuadrado */
+  /* Mantenemos la proporción original de tu banner */
   aspect-ratio: 1200 / 320;
 
-  background: url('../../../assets/images/banner5.png') no-repeat center center;
-  background-size: 100% 100%; /* Obliga a la imagen a encajar en el redondeado */
+  background: url('../../../assets/images/banner5.png') no-repeat;
+  /* FORZAMOS a que la imagen ocupe todo el espacio redondeado */
+  background-size: 100% 100%;
+  background-position: center;
 
-  /* BORDES MUY REDONDEADOS */
+  /* Bordes muy redondeados como en tu imagen */
   border-radius: 25px;
   position: relative;
-  overflow: hidden; /* Corta la luz para que siga la curva */
+  overflow: hidden; /* Corta la luz para que no salga de las esquinas */
 
-  /* Sombra para que flote */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  /* Sombra suave para dar profundidad */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 
   animation: bannerEntrada 1.2s ease-out forwards;
 }
 
-/* === EL EFECTO DE LUZ (La línea brillante) === */
+/* === LA LUCECITA (Reflejo en movimiento) === */
 #banner::after {
   content: "";
   position: absolute;
   top: 0;
   left: -150%;
-  width: 30%;
+  width: 35%;
   height: 100%;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(255, 255, 255, 0.45), /* Luz blanca nítida */
+    rgba(255, 255, 255, 0.4),
     transparent
   );
   transform: skewX(-25deg);
@@ -862,15 +864,15 @@ brand-main-image
 /* --- Botón AnyDesk --- */
 .banner-button {
   position: absolute;
-  right: 3%;
-  bottom: 8%;
+  right: 4%;
+  bottom: 10%;
   z-index: 10;
 }
 
 .banner-button img {
-  width: 16vw;
-  max-width: 170px;
-  min-width: 90px;
+  width: 15vw;
+  max-width: 180px;
+  min-width: 100px;
 }
 
 /* === ANIMACIONES === */
@@ -880,14 +882,16 @@ brand-main-image
 }
 
 @keyframes bannerEntrada {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/* === AJUSTE MÓVIL (Mantiene el redondeado) === */
+/* === AJUSTE PARA TODOS LOS DISPOSITIVOS (Móvil) === */
 @media (max-width: 768px) {
   #banner {
-    border-radius: 15px; /* Redondeado elegante en móvil */
-    aspect-ratio: 1200 / 380; /* Un poquito más alto en móvil para que no se aplaste */
+    /* En móvil mantenemos el 100% para que no salga blanco */
+    background-size: 100% 100%;
+    border-radius: 18px;
+    aspect-ratio: 1200 / 350; /* Un pelín más alto en móvil para leer mejor */
   }
 }
