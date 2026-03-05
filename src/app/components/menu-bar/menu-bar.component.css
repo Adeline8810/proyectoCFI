@@ -731,68 +731,6 @@ brand-main-image
   transform: scale(1.02);
 }
 
-.subtab-btn {
-  background: linear-gradient(135deg, #1f4e79, #163a5c);
-  color: #fff;
-  border-radius: 25px;
-  padding: 0.6rem 1.5rem;
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-
-.subtab-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-.tab-content a {
-  position: relative;
-  color: #1f4e79;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.tab-content a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(90deg, #1f4e79, #2563eb);
-  transition: width 0.3s ease;
-}
-
-.tab-content a:hover::after {
-  width: 100%;
-}
-
-.tab-content > div,
-.tab-content p,
-.tab-content ul {
-  background: #f8fafc;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tab-content > div:hover,
-.tab-content p:hover,
-.tab-content ul:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: #1f3a5f;
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
 /* Banner principal con animación inicial */
 #banner {
   width: 100%;
