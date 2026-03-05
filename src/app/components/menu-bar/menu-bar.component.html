@@ -40,7 +40,22 @@
 
       Le service complet, vous dis-je !
     </p>
+      <div class="infogerance-section">
+        <p>Nous avons ajouté une <strong>"corde à notre arc" : l'infogérance</strong>.<br/>
+        Qu'elle soit globale pour l'ensemble de vos besoins informatiques ou d'infrastructure avec supervision des serveurs, réseaux et équipements.<br/>
+
+        Nous sommes à même de vous proposer les services suivants :</p>
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px; border-left: 4px solid #1f4e79;">
+            <ul>
+                <li>Serveurs Cloud distants pour vos applicatifs métiers</li>
+                <li>Sauvegarde Cloud des données stratégiques</li>
+                <li>Des images disques générées journalièrement pour récupération de données suite à dommage irréversible sur postes stratégiques</li>
+                <li>Un accès sécurisé sur réseau VPN</li>
+            </ul>
+        </div>
     </div>
+    </div>
+
 
      <div class="acc-center-image">
         <img src="assets/images/signature_dm.gif"
@@ -99,6 +114,13 @@
         <p>Ce lien vous permet de connaître la dénomination de votre navigateur web - du point de vue des serveurs web.</p>
       </ul>
       </div>
+
+      <h3>TELEPHONIE</h3>
+      <p>Grâce à l'outil <strong>Centrex</strong>, nous pouvons fournir un service complet de téléphonie fixe et de flotte de portables, ainsi que les matériels nécessaires para la téléphonie et les liaisons fibres nécessaires.</p>
+
+
+
+
 </div>
        <div *ngIf="showTools" class="tools-section">
 
@@ -305,6 +327,34 @@
     </div>
   </mat-tab>
 
+
+  <!--***este es nuevo*-->
+<mat-tab label="Encaissemment">
+    <div class="tab-content contact-content">
+
+
+      <h3>ENCAISSEMENT</h3>
+        <p>
+            Grâce à notre partenaire <strong>NET15</strong>, nous pouvons également proposer à tous les commerces de proximité des solutions fiables et accessibles.
+        <br/>
+
+            Quelque soit votre activité commerciale, nous avons la solution d'encaissement avec logiciel et matériels tels que tiroirs caisse, douchette scanner, imprimante et terminaux tactiles. Les logiciels sont certifiés <strong>NF525</strong> et assure l'essentiel des besoins commerçants :
+        </p>
+
+        <ul class="features-list">
+            <li><i class="fas fa-check-circle"></i> Interface tactile simple</li>
+            <li><i class="fas fa-check-circle"></i> Encaissement rapide et sécurisé</li>
+            <li><i class="fas fa-check-circle"></i> Gestion des stocks</li>
+            <li><i class="fas fa-check-circle"></i> Fichiers clients, fidélisation clients, promotions</li>
+            <li><i class="fas fa-check-circle"></i> Exports comptables</li>
+            <li><i class="fas fa-check-circle"></i> L'encaissement est sur postes fixes ou portables</li>
+        </ul>
+
+
+    </div>
+  </mat-tab>
+
+
 <mat-tab label="Bureautique">
   <div class="tab-content">
 <!--<h2 class="tab-main-title">Bureautique</h2>-->
@@ -317,14 +367,11 @@
         Bureautique
       </button>
 
-     <button class="subtab-btn"
-        [class.active-subtab]="showBureautiqueOption === 'option1'"
-        (click)="showBureautiqueOption = 'option1'; changeTitle('Triumph-Adler')"> Triumph-Adler
-    </button>
+
 
       <button class="subtab-btn"
               [class.active-subtab]="showBureautiqueOption === 'option2'"
-              (click)="showBureautiqueOption = 'option2';changeTitle('Brother')">Brother
+              (click)="showBureautiqueOption = 'option2';changeTitle('Brother')">Mainteneur Brother
 
       </button>
 
@@ -346,8 +393,7 @@
       La gamme des produits proposés par CFI comprend tous les grands noms de la bureautique moderne.</p>
 <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
       <ul>
-        <li>TRIUMPH-ADLER</li>
-        <li>BROTHER</li>
+        <li>Mainteneur Brother</li>
         <li>SHARP</li>
       </ul>
 </div>
