@@ -20,6 +20,7 @@ export class MenuBarComponent {
   showMaterial: boolean = false;
   showBureautiqueOption: string | null = null;
   today: Date = new Date();
+  showTools: 'ip' | 'browser' | null = null;
 
   constructor(private titleService: Title) {
     // Actualiza la fecha cada minuto para que el reloj no se quede estático

@@ -664,3 +664,22 @@ brand-main-image
 .email-link:hover {
   text-decoration: underline;
 }
+
+
+.tools-section {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.tools-section .info-box {
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+.tools-section .subtab-btn {
+  margin-bottom: 15px;
+}
