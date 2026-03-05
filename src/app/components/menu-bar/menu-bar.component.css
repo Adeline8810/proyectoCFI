@@ -683,3 +683,12 @@ brand-main-image
 .tools-section .subtab-btn {
   margin-bottom: 15px;
 }
+
+p {
+  text-align: justify; /* Justificado */
+  background-color: rgba(0, 0, 0, 0.03); /* Fondo tenue */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Separación entre párrafos */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
