@@ -814,122 +814,64 @@ brand-main-image
 /* --- El Banner con Efecto de Entrada "Luz y Zoom" --- */
 
 
-/* =====================================================
-   BANNER PRINCIPAL - EFECTO BRILLO SUAVE
-   ===================================================== */
-
+/* --- Contenedor --- */
 .banner-wrapper {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
+/* --- El Banner (Sin fondos feos) --- */
 #banner {
   width: 100%;
-  height: 320px; /* Altura ideal PC */
+  height: 300px; /* Altura en PC */
   background: url('../../../assets/images/banner5.png') no-repeat center center;
-  background-size: cover;
-  border-radius: 12px;
+  background-size: cover; /* Cubre todo el espacio sin dejar blanco */
+  border-radius: 12px; /* Redondeado bonito */
   position: relative;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 
-  /* Animación: Entrada suave con un toque de luz */
+  /* Animación de entrada */
   animation: bannerEntradaSuave 1.5s ease-out forwards;
 }
 
-/* El efecto de "reflejo de luz" (Glow) */
-#banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.3), /* Luz mucho más tenue */
-    transparent
-  );
-  transform: skewX(-25deg);
-  animation: brilloPasajero 1.5s ease-in-out 0.5s; /* El brillo pasa una vez */
-}
-
-/* === ANIMACIONES === */
-
-@keyframes bannerEntradaSuave {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-    filter: brightness(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    filter: brightness(1);
-  }
-}
-
-@keyframes brilloPasajero {
-  0% { left: -150%; }
-  100% { left: 150%; }
-}
-
-/* Botón AnyDesk */
+/* --- Botón AnyDesk --- */
 .banner-button {
   position: absolute;
   right: 20px;
   bottom: 15px;
   z-index: 10;
-  transition: transform 0.3s ease;
-}
-
-.banner-button:hover {
-  transform: scale(1.05);
 }
 
 .banner-button img {
   width: 180px;
 }
 
-/* === AJUSTES PARA MÓVIL === */
+/* === AJUSTE MÓVIL (RESPONSIVO REAL) === */
 @media (max-width: 768px) {
   #banner {
-    height: 160px; /* Altura ajustada para cel */
-    border-radius: 8px;
+    height: 180px; /* Altura ajustada para que no se vea cortado lo principal */
     background-size: cover;
+    background-position: left center; /* Enfoca el logo y texto en el celular */
+    border-radius: 10px;
   }
 
   .banner-button {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    position: absolute; /* Mantenemos el botón sobre el banner */
+    right: 10px;
+    bottom: 10px;
   }
 
   .banner-button img {
-    width: 140px;
-  }
-
-  .tab-header-extra {
-    position: relative;
-    top: 5px;
-    text-align: center;
-    width: 100%;
-    font-size: 0.75rem;
-    color: #1f4e79;
-    background: transparent;
+    width: 120px; /* Más pequeño para que no tape el dibujo */
   }
 }
 
-
-
-
+@keyframes bannerEntradaSuave {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
