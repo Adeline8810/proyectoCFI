@@ -5,8 +5,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 
 
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,5 +19,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CFI-M';
+ title = 'CFI-M';
+
 }
+
