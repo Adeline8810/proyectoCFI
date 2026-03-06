@@ -1,3 +1,4 @@
+
 /* 🔤 Fuente profesional desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -36,9 +37,9 @@ body, html {
   background: #ffffff;
   width: 95%;
   max-width: 1100px;
-  margin: 0 auto; /* Cambiamos 20px por 0 para pegarlo al toolbar */
+  margin: 20px auto; /* Cambiamos 20px por 0 para pegarlo al toolbar */
   padding: 25px;
-  border-radius: 0 0 6px 6px; /* Bordes redondeados solo abajo */
+  border-radius: 8px; /* Bordes redondeados solo abajo */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   min-height: 85vh;
   margin-top: 0 !important; /* Elimina cualquier espacio arriba */
@@ -46,6 +47,23 @@ body, html {
   margin-top: 0 !important; /* Pega la tarjeta al tope */
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
+
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    width: 100% !important;   /* Ocupa el 100% real */
+    margin: 0 !important;     /* Elimina cualquier margen */
+    padding: 5px !important;  /* Padding mínimo para que el texto no toque el borde */
+    border-radius: 0 !important;
+    box-shadow: none !important; /* En móvil, la sombra es innecesaria */
+  }
+
+  /* Ajuste del banner para que sea más estrecho y ocupe menos espacio vertical */
+  #banner {
+    aspect-ratio: 16 / 9; /* Formato más ancho que alto para ganar espacio abajo */
+    border-radius: 10px;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -103,6 +121,10 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
   padding: 1.8rem;
   margin-top: -4px;
+  padding-top: 10px !important;
+  padding: 10px 5px !important; /* Muy poco padding en los lados */
+  margin-top: 0 !important;
+
 }
 
 .mat-mdc-tab-group {
@@ -332,5 +354,18 @@ input {
 
 
 .mat-tab-group {
-  margin-top: 0 !important;
+  margin-top: -20px !important;
+}
+
+@media (max-width: 768px) {
+  .tab-content p, .tab-content ul, .tab-content ol {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 0.95rem; /* Fuente un poco más pequeña para no amontonar */
+  }
+
+  /* Ajuste para que las imágenes no limiten el ancho del texto */
+  .media-container {
+    padding: 0 5px !important;
+  }
 }

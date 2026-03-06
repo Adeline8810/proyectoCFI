@@ -1,3 +1,4 @@
+
 /* =====================================================
    ESTILO TABS - AZUL CORPORATIVO SERIO
    ===================================================== */
@@ -870,10 +871,7 @@ brand-main-image
 }
 
 /* Asegura que la altura sea estable */
-.main-card {
-  height: auto; /* Cambia min-height por height si es necesario */
-  min-height: 500px; /* Dale una altura mínima fija para que no salte */
-}
+
 /* 1. Desactiva la animación de deslizamiento de Angular Material */
 ::ng-deep .mat-mdc-tab-body-wrapper {
   transition: none !important;
@@ -882,11 +880,6 @@ brand-main-image
 /* 2. Asegura que el cuerpo de la pestaña no cause scroll innecesario */
 ::ng-deep .mat-mdc-tab-body-content {
   overflow: hidden !important;
-}
-
-/* 3. Fija una altura mínima para el contenedor de la tarjeta */
-.main-card {
-  min-height: 85vh; /* O un valor fijo como 700px */
-  height: auto;
-  transition: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
