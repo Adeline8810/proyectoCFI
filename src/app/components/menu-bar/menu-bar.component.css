@@ -237,28 +237,13 @@
 
 
 
-.banner-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 
 
 
 /* --- El Banner --- */
-#banner {
-  width: 100%;
-  height: 300px; /* Altura original en PC */
-  background: url('../../../assets/images/banner5.png') no-repeat center center;
-  background-size: contain; /* Para que NUNCA se recorte nada del dibujo */
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
+
 
 .banner-button {
   position: absolute;
@@ -270,23 +255,7 @@
   width: 180px;
 }
 
-/* === AJUSTES PARA MÓVIL (Como en tu primera foto) === */
-@media (max-width: 768px) {
-  #banner {
-    height: 180px; /* Altura reducida para que encaje en la pantalla del celular */
-    background-size: contain;
-    margin-bottom: 10px;
-  }
 
-  .banner-button {
-    position: static; /* El botón se pone debajo en el móvil para no tapar el banner */
-    margin-top: 5px;
-  }
-
-  .banner-button img {
-    width: 150px;
-  }
-}
 /* =====================================================
    SUBMENU BUREAUTIQUE
    ===================================================== */
@@ -732,29 +701,8 @@ brand-main-image
 }
 
 /* Banner principal con animación inicial */
-#banner {
-  width: 100%;
-  height: 300px;
-  background: url('../../../assets/images/banner5.png') no-repeat center center;
-  background-size: cover;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
 
-  /* Sombra sutil para levantarlo */
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 
-  /* Animación solo al inicio */
-  animation: bannerIntro 2s ease-out forwards;
-  transform-origin: center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-/* Hover opcional para interacción */
-#banner:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-}
 
 /* Animación de entrada inicial */
 @keyframes bannerIntro {
@@ -811,39 +759,41 @@ brand-main-image
 
 
 /* --- El Banner Responsivo --- */
-/* --- Contenedor --- */
+
+
+/* --- Contenedor Principal --- */
 .banner-wrapper {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 15px auto;
-  padding: 0 12px; /* Espacio para que el sombreado se vea bien */
+  padding: 0 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* --- El Banner (Igual a tu foto) --- */
+/* --- El Banner Profesional --- */
 #banner {
   width: 100%;
-  /* Mantenemos la proporción original de tu banner */
+  /* Mantiene la forma en PC y Celular sin que se vea cuadrado feo */
   aspect-ratio: 1200 / 320;
 
-  background: url('../../../assets/images/banner5.png') no-repeat;
-  /* FORZAMOS a que la imagen ocupe todo el espacio redondeado */
+  background: url('../../../assets/images/banner5.png') no-repeat center center;
+  /* El secreto para que NO se vea blanco y sea responsivo */
   background-size: 100% 100%;
-  background-position: center;
 
-  /* Bordes muy redondeados como en tu imagen */
-  border-radius: 25px;
+  border-radius: 20px;
   position: relative;
-  overflow: hidden; /* Corta la luz para que no salga de las esquinas */
-
-  /* Sombra suave para dar profundidad */
+  overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 
+  /* Animación de entrada al cargar */
   animation: bannerEntrada 1.2s ease-out forwards;
 }
 
-/* === LA LUCECITA (Reflejo en movimiento) === */
+/* === LA LUCECITA (Reflejo que cruza) === */
 #banner::after {
   content: "";
   position: absolute;
@@ -858,27 +808,30 @@ brand-main-image
     transparent
   );
   transform: skewX(-25deg);
-  animation: luzCruzando 2s ease-in-out 1s;
+  /* Animación infinita para que siempre se vea la luz pasando */
+  animation: luzCruzando 3s infinite ease-in-out;
 }
 
 /* --- Botón AnyDesk --- */
 .banner-button {
   position: absolute;
   right: 4%;
-  bottom: 10%;
+  bottom: 8%;
   z-index: 10;
 }
 
 .banner-button img {
-  width: 15vw;
+  width: 16vw;
   max-width: 180px;
   min-width: 100px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 /* === ANIMACIONES === */
 @keyframes luzCruzando {
   0% { left: -150%; }
-  100% { left: 150%; }
+  50% { left: 150%; } /* Pasa la luz */
+  100% { left: 150%; } /* Pausa antes de volver a empezar */
 }
 
 @keyframes bannerEntrada {
@@ -886,12 +839,21 @@ brand-main-image
   to { opacity: 1; transform: scale(1); }
 }
 
-/* === AJUSTE PARA TODOS LOS DISPOSITIVOS (Móvil) === */
+/* === AJUSTE PARA MÓVIL === */
 @media (max-width: 768px) {
   #banner {
-    /* En móvil mantenemos el 100% para que no salga blanco */
-    background-size: 100% 100%;
-    border-radius: 18px;
-    aspect-ratio: 1200 / 350; /* Un pelín más alto en móvil para leer mejor */
+    aspect-ratio: 1200 / 400; /* Un poco más alto en móvil para leer mejor */
+    border-radius: 15px;
+  }
+
+  .banner-button {
+    right: 5px;
+    bottom: 5px;
+  }
+
+  /* Evita que el texto de la fecha se encime */
+  .tab-header-extra {
+    top: -30px;
   }
 }
+
