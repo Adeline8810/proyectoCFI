@@ -1,7 +1,11 @@
-<mat-toolbar color="primary">
-  {{ title }}
+<mat-toolbar class="main-toolbar">
+  <span style="flex: 1;"></span>
+
+  <span class="toolbar-title">{{ title }}</span>
+
+  <span style="flex: 1; text-align: right;" class="date-display">
+    {{ today | date: 'fullDate':'':'fr-FR' }}
+  </span>
 </mat-toolbar>
 
 <app-menu-bar></app-menu-bar>
-
-

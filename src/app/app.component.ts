@@ -20,6 +20,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 })
 export class AppComponent {
  title = 'CFI-M';
+ today: Date = new Date();
 
 }
 

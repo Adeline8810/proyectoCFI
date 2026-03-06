@@ -5,11 +5,47 @@
    ESTILOS GLOBALES
 ============================= */
 
-body {
+
+/* Global: Fondo degradado y estructura padre */
+/* Fondo corporativo: Degradado de Gris Oscuro a Gris Acero */
+/* Fondo gris muy claro y profesional */
+body, html {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f7fb; /* fondo gris azulado corporativo */
-  color: #1f2937;
+  padding: 0;
+  /* min-height es vital para que el degradado ocupe toda la pantalla */
+  min-height: 100vh;
+  width: 100%;
+
+  /* Degradado: de Gris Plata (#d1d8e0) a Blanco (#ffffff)
+     Esto se notará mucho más que antes */
+  /*background: linear-gradient(180deg, #d1d8e0 0%, #ffffff 100%);*/
+  background: linear-gradient(180deg, #b2b2b3 0%, #ffffff 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* Esto evita que el fondo se repita o se corte */
+
+  background-repeat: no-repeat;
+
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+/* Tarjeta centrada y limpia */
+/* Reducimos márgenes para aprovechar el espacio */
+.main-card {
+  background: #ffffff;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto; /* Cambiamos 20px por 0 para pegarlo al toolbar */
+  padding: 25px;
+  border-radius: 0 0 6px 6px; /* Bordes redondeados solo abajo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-height: 85vh;
+  margin-top: 0 !important; /* Elimina cualquier espacio arriba */
+
+  margin-top: 0 !important; /* Pega la tarjeta al tope */
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
 h1, h2, h3, h4, h5 {
@@ -265,6 +301,36 @@ input {
   font-weight: 500;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.main-toolbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: #34495e !important;
+  color: #ffffff !important;
+  padding: 0 20px !important;
+  height: 50px !important;
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.toolbar-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.date-display {
+  font-size: 0.8rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
 
 
-
+.mat-tab-group {
+  margin-top: 0 !important;
+}
