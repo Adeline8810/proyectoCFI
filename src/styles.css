@@ -600,3 +600,112 @@ input {
 .driver-item a:hover {
   text-decoration: underline;
 }
+
+
+@media (max-width: 600px) {
+  .driver-item {
+    display: flex;
+    flex-direction: column; /* Apila el nombre y los enlaces verticalmente */
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .driver-item strong {
+    margin-bottom: 8px; /* Separa el nombre de los enlaces */
+    width: 100%;
+  }
+
+  .driver-item a {
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 0.95rem; /* Un pelín más grande para tocar con el dedo */
+  }
+}
+
+
+.login-card {
+  max-width: 400px;
+  margin: 40px auto; /* Centrado automático */
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid #e1e8ed;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f4e79;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* Importante para que no se salga del contenedor */
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  background-color: #2980b9;
+}
+/* 1. Contenedor principal: El Flexbox */
+.flex-container {
+  display: flex;
+  flex-direction: row;      /* Orden horizontal por defecto */
+  flex-wrap: wrap;          /* Permite que la imagen baje si no hay espacio */
+  gap: 20px;                /* Espacio entre texto e imagen */
+  align-items: flex-start;  /* Alinea todo arriba */
+}
+
+/* 2. Texto: ocupa el espacio disponible */
+.text-content {
+  flex: 1;                  /* Crece para ocupar el espacio restante */
+  min-width: 300px;         /* Evita que el texto sea una columna demasiado estrecha */
+}
+
+/* 3. Imagen: ocupa un ancho fijo */
+.image-content {
+  flex: 0 0 350px;          /* Ancho fijo de 350px para la imagen */
+}
+
+/* 4. Imagen responsiva */
+.responsive-img {
+  width: 100%;              /* Se ajusta al ancho de su contenedor (image-content) */
+  height: auto;             /* Mantiene la proporción */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 5. REGLA PARA CELULARES (Pantallas pequeñas) */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* Cambia a vertical: imagen arriba, texto abajo */
+  }
+
+  .image-content {
+    flex: 0 0 100%;         /* La imagen toma el ancho total en celular */
+  }
+}
