@@ -369,3 +369,230 @@ input {
     padding: 0 5px !important;
   }
 }
+
+
+
+.computex-wrapper {
+  display: flex !important; /* Alinea menú y contenido en horizontal */
+  padding: 0 !important;
+  min-height: 500px;
+  background: #ffffff;
+}
+
+.computex-sidebar {
+  width: 250px;
+  background: #2c3e50; /* Color oscuro elegante */
+  color: white;
+  padding: 20px 0;
+  border-right: 1px solid #ddd;
+
+  .sidebar-title {
+    padding: 0 20px 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #3498db;
+    border-bottom: 1px solid #3e4f5f;
+  }
+}
+
+.sidebar-nav {
+  margin-top: 15px;
+
+  .nav-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #ecf0f1;
+
+    mat-icon { font-size: 20px; width: 20px; height: 20px; }
+    &:hover { background: #34495e; }
+    &.active { background: #3498db; color: white; border-left: 4px solid #fff; }
+    &.sub { padding-left: 50px; font-size: 0.9rem; }
+  }
+
+  .group-header {
+    padding: 15px 20px 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #7f8c8d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.computex-main {
+  flex: 1;
+  padding: 30px;
+  background: #f9f9f9;
+
+  h2 { color: #2c3e50; margin-bottom: 20px; border-bottom: 2px solid #3498db; display: inline-block; padding-bottom: 5px; }
+}
+
+/* Animación simple */
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.enterprise-panel {
+  border-left: 5px solid #1f4e79; /* Un azul corporativo fuerte */
+  margin-bottom: 10px !important;
+
+  mat-panel-title {
+    color: #1f4e79;
+    mat-icon { color: #1f4e79; margin-right: 10px; }
+  }
+}
+
+.sub-menu-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+
+  button {
+    text-align: left !important;
+    justify-content: flex-start;
+    border-radius: 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    &:hover {
+      background-color: #f8fafc;
+      color: #1f4e79;
+    }
+  }
+}
+
+.computex-display-area {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Barre de recherche dans la sidebar */
+.sidebar-search {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-search form {
+  display: flex;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-input {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  font-size: 13px;
+  outline: none;
+}
+
+.search-btn {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Footer de la sidebar */
+.sidebar-footer {
+  margin-top: auto;
+  padding: 15px;
+  background: rgba(0,0,0,0.3);
+  font-size: 11px;
+  color: #7f8c8d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-footer mat-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+/* Alignement des icônes dans les boutons simples */
+.group-btn mat-icon:not(.arrow) {
+  color: #3498db; /* Donne une couleur spécifique aux icônes */
+}
+
+
+
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #3498db, transparent);
+  margin-bottom: 30px;
+}
+
+/* Estilo para los textos dentro de la tarjeta */
+.content-text {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.content-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-left: 20px; /* Espace entre le menu et le contenu */
+  min-height: 500px;
+}
+
+
+.section-subtitle {
+  color: #1f4e79; /* Un azul un poco más oscuro que el título principal */
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 4px solid #3498db; /* Un toque visual a la izquierda */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.driver-item {
+  padding: 12px;
+  border-bottom: 1px solid #eef2f7;
+  transition: background 0.3s;
+}
+
+.driver-item:hover {
+  background-color: #f8fafc;
+}
+
+.driver-item strong {
+  color: #1f4e79;
+  display: inline-block;
+  width: 150px; /* Alinea todos los nombres de marcas */
+}
+
+.driver-item a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.driver-item a:hover {
+  text-decoration: underline;
+}

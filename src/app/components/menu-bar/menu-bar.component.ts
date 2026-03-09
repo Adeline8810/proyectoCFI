@@ -4,6 +4,8 @@ import localeFr from '@angular/common/locales/fr'; // 📌 Importa el locale fra
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Title } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 // Registrar el locale francés
 registerLocaleData(localeFr);
@@ -11,7 +13,7 @@ registerLocaleData(localeFr);
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
-  imports: [CommonModule, MatTabsModule, MatToolbarModule],
+  imports: [CommonModule, MatTabsModule, MatToolbarModule,MatIconModule,MatExpansionModule],
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.css'],
   encapsulation: ViewEncapsulation.None
@@ -41,5 +43,9 @@ ngOnInit() {
   this.titleService.setTitle('CFI - Accueil');
 }
 
+
+
+menuOpen: string = '';
+computexSection: string = 'accueil';
 
 }

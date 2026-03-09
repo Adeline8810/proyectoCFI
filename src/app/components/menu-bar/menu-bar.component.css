@@ -883,3 +883,95 @@ brand-main-image
   padding: 0 !important;
   margin: 0 !important;
 }
+
+/* Contenedor principal del tab */
+.computex-layout {
+  display: flex;
+  min-height: 500px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Barra lateral oscura y elegante */
+.sidebar {
+  width: 260px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+}
+
+/* Botón principal del acordeón */
+.group-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #bdc3c7;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.group-btn:hover {
+  color: white;
+  background-color: #34495e;
+}
+
+.group-btn .arrow {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+/* Sub-ítems (El efecto de despliegue) */
+.sub-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #1a252f;
+}
+
+/* Esta clase se activa con el [class.show] de Angular */
+.sub-items.show {
+  max-height: 250px;
+}
+
+.sub-items button {
+  width: 100%;
+  padding: 10px 20px 10px 50px;
+  background: transparent;
+  border: none;
+  color: #95a5a6;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.sub-items button:hover {
+  color: #3498db;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Área de contenido a la derecha */
+.content-view {
+  flex: 1;
+  padding: 40px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+

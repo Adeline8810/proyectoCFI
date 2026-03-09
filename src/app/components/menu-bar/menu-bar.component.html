@@ -494,6 +494,240 @@
   </div>
 </mat-tab>
 
+  <mat-tab label="COMPUTECH">
+
+<div class="computex-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-header">COMPUTECH</div>
+
+     <nav class="menu-list">
+  <button class="group-btn" (click)="computexSection = 'accueil'; menuOpen = ''">
+    <mat-icon>home</mat-icon> <span>Accueil</span>
+  </button>
+
+  <div class="menu-group">
+    <button class="group-btn" (click)="menuOpen = (menuOpen === 'ent' ? '' : 'ent')">
+      <mat-icon>corporate_fare</mat-icon> <span>Enterprise</span>
+      <mat-icon class="arrow">{{ menuOpen === 'ent' ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+    <div class="sub-items" [class.show]="menuOpen === 'ent'">
+      <button (click)="computexSection = 'personnel'"><mat-icon>groups</mat-icon> Le Personnel</button>
+      <button (click)="computexSection = 'magasin'"><mat-icon>store</mat-icon> Le Magasin</button>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <button class="group-btn" (click)="menuOpen = (menuOpen === 'prod' ? '' : 'prod')">
+      <mat-icon>shopping_bag</mat-icon> <span>Les Produits</span>
+      <mat-icon class="arrow">{{ menuOpen === 'prod' ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+    <div class="sub-items" [class.show]="menuOpen === 'prod'">
+      <button (click)="computexSection = 'materiel'"><mat-icon>desktop_windows</mat-icon> Matériel</button>
+      <button (click)="computexSection = 'logiciel'"><mat-icon>apps</mat-icon> Logiciel</button>
+      <button (click)="computexSection = 'occasion'"><mat-icon>history</mat-icon> Occasion</button>
+      <button (click)="computexSection = 'gamesWorkshop'"><mat-icon>sports_esports</mat-icon> Games Workshop</button>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <button class="group-btn" (click)="menuOpen = (menuOpen === 'serv' ? '' : 'serv')">
+      <mat-icon>plumbing</mat-icon> <span>Services</span>
+      <mat-icon class="arrow">{{ menuOpen === 'serv' ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+    <div class="sub-items" [class.show]="menuOpen === 'serv'">
+      <button (click)="computexSection = 'sav'"><mat-icon>handyman</mat-icon> SAV</button>
+      <button (click)="computexSection = 'reseau'"><mat-icon>router</mat-icon> Réseau</button>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <button class="group-btn" (click)="menuOpen = (menuOpen === 'dl' ? '' : 'dl')">
+      <mat-icon>download</mat-icon> <span>Téléchargement</span>
+      <mat-icon class="arrow">{{ menuOpen === 'dl' ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+    <div class="sub-items" [class.show]="menuOpen === 'dl'">
+      <button (click)="computexSection = 'pilotes'"><mat-icon>settings_input_component</mat-icon> Pilotes</button>
+      <button (click)="computexSection = 'utilitaires'"><mat-icon>construction</mat-icon> Utilitaires</button>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <button class="group-btn" (click)="menuOpen = (menuOpen === 'liens' ? '' : 'liens')">
+      <mat-icon>link</mat-icon> <span>Liens</span>
+      <mat-icon class="arrow">{{ menuOpen === 'liens' ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+    <div class="sub-items" [class.show]="menuOpen === 'liens'">
+      <button (click)="computexSection = 'pros'"><mat-icon>business_center</mat-icon> Pros</button>
+      <button (click)="computexSection = 'divers'"><mat-icon>category</mat-icon> Divers</button>
+    </div>
+  </div>
+
+  <button class="group-btn" (click)="computexSection = 'plan'"><mat-icon>map</mat-icon><span>Plan d'accès</span></button>
+  <button class="group-btn" (click)="computexSection = 'espace'"><mat-icon>lock</mat-icon><span>Espace réservé</span></button>
+  <button class="group-btn" (click)="computexSection = 'points'"><mat-icon>stars</mat-icon><span>Mes points</span></button>
+  <button class="group-btn" (click)="computexSection = 'contact'"><mat-icon>mail</mat-icon><span>Nous contacter</span></button>
+  <button class="group-btn" (click)="computexSection = 'forum'"><mat-icon>forum</mat-icon><span>Forum</span></button>
+</nav>
+    </aside>
+
+<main class="content-view">
+  <div [ngSwitch]="computexSection" class="content-card">
+
+    <div *ngSwitchCase="'accueil'">
+      <h2 class="section-title"><mat-icon>home</mat-icon> Bienvenue sur Computech</h2>
+      <div class="section-divider"></div>
+      <p class="content-text">Vous êtes ici sur le site de Computech Multimédia, SARL informatique du Cantal. Prenez le temps de connaître les services et les produits que vous offre le magasin et n'oubliez pas de jeter un oeil au forum avant de partir. Bon surf !</p>
+    </div>
+
+    <div *ngSwitchCase="'personnel'">
+      <h2 class="section-title"><mat-icon>groups</mat-icon> Le personnel</h2>
+      <div class="section-divider"></div>
+      <p class="content-text">Le personnel de Computech, c'est toute une équipe dynamique.</p>
+    </div>
+
+    <div *ngSwitchCase="'magasin'">
+      <h2 class="section-title"><mat-icon>store</mat-icon> Le magasin</h2>
+      <div class="section-divider"></div>
+      <p class="content-text"><strong>Horaires d'ouverture :</strong> du Lundi au Samedi de 10h à 12h et de 14h à 19h</p>
+    </div>
+
+    <div *ngSwitchCase="'materiel'">
+      <h2 class="section-title"><mat-icon>desktop_windows</mat-icon> Matériel</h2>
+      <div class="section-divider"></div>
+      <h3>Vente et montage de PC :</h3>
+      <p class="content-text">Computech vous propose en provenance de son atelier des ordinateurs assemblés selon la demande, des pièces détachées, des périphériques, ou autres accessoires... Vous pouvez également commander sur nos catalogues vos PC portable. Vous disposez enfin d'un devis gratuit pour tout ordinateur que vous souhaitez faire assembler.</p>
+    </div>
+
+    <div *ngSwitchCase="'logiciel'">
+      <h2 class="section-title"><mat-icon>apps</mat-icon> Logiciel</h2>
+      <div class="section-divider"></div>
+
+
+  <h3 class="section-subtitle"><mat-icon>build</mat-icon> Spécialiste en jeux vidéo :</h3>
+  <p class="content-text">
+    Computech dispose des derniers jeux parus en France. Nombreux et à des prix intéressants (les moins chers du marché!!), vous trouverez certainement votre bonheur que vous soyez un joueur occasionnel ou un "hardcore gamer"...
+  </p>
+
+    <h3 class="section-subtitle"><mat-icon>build</mat-icon> Vente de logiciels :</h3>
+  <p class="content-text">
+    Educatifs, pratiques, utilitaires... De nombreux logiciels fréquemment renouvelés sont mis à votre disposition.
+
+NB: Nos techniciens restent à votre disposition pour vous conseiller sur le contenu ou sur les besoins matériels de chacun des jeux ou des logiciels.
+  </p>
+
+    </div>
+
+    <div *ngSwitchCase="'occasion'">
+      <h2 class="section-title"><mat-icon>history</mat-icon> Occasion</h2>
+      <div class="section-divider"></div>
+
+
+
+    <h3 class="section-subtitle"><mat-icon>build</mat-icon>
+Vente de jeux d'occasion PC et console:</h3>(Dreamcast, Gameboy Color, Playstation2, Xbox...)
+  <p class="content-text">
+Si vous avez un jeu auquel vous ne jouez plus et que vous ne voulez pas le jeter, alors passez chez Computech Multimedia, on vous le rachète. Les jeux d'occasion sont nombreux et recouvrent une gamme complète. A des tout petits prix, vous pourrez retrouver vos anciens jeux favoris et recréer une logithèque digne de ce nom.</p>
+
+<h3 class="section-subtitle"><mat-icon>build</mat-icon> Montage de PC d'occasion pour les petits besoins ou les petits budgets.:</h3>
+  <p class="content-text">
+    A partir de composants testés et certifiés, nos techniciens assemblent des unités centrales performantes et tout à fait convenables pour quelqu'un qui ne souhaite pas investir dans un PC neuf.
+
+
+  </p>
+
+
+</div>
+
+    <div *ngSwitchCase="'gamesWorkshop'">
+      <h2 class="section-title"><mat-icon>sports_esports</mat-icon> Games Workshop</h2>
+      <div class="section-divider"></div>
+
+     <p class="content-text">Warhammer est un jeu de guerre immersif et passionant avec figurines où de puissants guerriers combattent dans l'histoire du temps. A l'époque médiévale vous commandez votre propre armée de troupes endurcies, du soldat de l'empire aux trebuchets bretons en passant par les cavaliers, pour mener à bien votre quête et bâtir une véritable armée.</p>
+     <p class="content-text">Vos forces sont représentées par des figurines de la gamme Citadel que vous peignez et assemblez vous même, il existe des milliers de références différentes, de véhicules et d'engins de guerre, ainsi vos tactiques ne seront limitées que par votre imagination !!!</p>
+    <p class="content-text">Les livres d'armées et les codex vous renseigneront sur votre armée. Ils contiennent aussi des photos en couleur, des astuces de peinture et de modélisme, ainsi que des scénarios et des appendices contenant des règles additionnelles et des informations. Il vous parle également du Monde de Warhammer : ses nations, ses peuples et les créatures qui y vivent, ainsi que leur histoire. Vous deviendrez très vite incollable sur le monde Warhammer</p>
+    <p class="content-text">Dans notre magasin vous trouverez des figurines, des accessoires, des livres et des guides... Tout pour bâtir progressivement votre armée et devenir un maître de Warhammer.</p>
+
+
+    </div>
+
+    <div *ngSwitchCase="'sav'">
+      <h2 class="section-title"><mat-icon>handyman</mat-icon> Service Après-Vente</h2>
+      <div class="section-divider"></div>
+
+     <h3 class="section-subtitle"><mat-icon>build</mat-icon>Un SAV rapide et performant :</h3>
+  <p class="content-text">
+   Le SAV de computech vous propose des interventions techniques sur toutes les marques, des devis détaillés, la résolution des problèmes matériels et logiciels et ceci dans un soucis quotidien de rapidité et d'efficacité...
+  </p>
+    </div>
+
+    <div *ngSwitchCase="'reseau'">
+      <h2 class="section-title"><mat-icon>router</mat-icon> Réseau</h2>
+      <div class="section-divider"></div>
+      <h3 class="section-subtitle"><mat-icon>build</mat-icon>Un réseau local disponible: </h3>
+  <p class="content-text">
+   Computech dispose de 15 ordinateurs reliés en réseau local et bénéficiant d'un accés internet haut débit dans une salle climatisée et fermée du reste du magasin. Après l'ouverture d'un compte auprès de l'un des responsables lors de votre première visite, vous aurez un accès forfaitaire que vous pourrez aisément réalimenter.
+  </p>
+   <p class="content-text">
+   Grâce à l'accès internet vous pourrez surfer, consulter vos mails, tchatter mais également jouer en réseau avec vos amis ou avec des internautes du monde entier!!
+  </p>
+   <p class="content-text">
+  La salle réseau de computech c'est LA salle de la région. Alors si vous en avez marre de jouer aux mêmes jeux et si vous aimez jouer à plusieurs, n'hésitez plus et passez nous voir.</p>
+    </div>
+
+    <div *ngSwitchCase="'pilotes'">
+      <h2 class="section-title"><mat-icon>settings_input_component</mat-icon> Pilotes</h2>
+      <div class="section-divider"></div>
+
+    <p class="content-text" style="margin-bottom: 25px;">
+    Computech dispose de 15 ordinateurs reliés en réseau local avec accès internet haut débit.
+    Pour accéder aux téléchargements, veuillez ouvrir un compte lors de votre première visite.
+  </p>
+
+  <h3 class="section-subtitle"><mat-icon>download</mat-icon> Sites de pilotes et mises à jour</h3>
+
+  <ul class="drivers-list" style="list-style: none; padding: 0;">
+    <li class="driver-item">
+      <strong>ATI :</strong>
+      <a href="https://www.amd.com/fr.html" target="_blank">Page d'accueil</a> - <a href="https://www.amd.com/fr.html" target="_blank">Téléchargement</a>
+    </li>
+    <li class="driver-item">
+      <strong>Nvidia :</strong>
+      <a href="https://www.nvidia.com/page/" target="_blank">Page d'accueil</a> - <a href="https://www.nvidia.com/en-us/drivers/" target="_blank">Téléchargement</a>
+    </li>
+    <li class="driver-item">
+      <strong>Touslesdrivers :</strong>
+      <a href="https://www.touslesdrivers.com/" target="_blank">Page d'accueil</a>
+    </li>
+    <li class="driver-item">
+      <strong>Windows Update :</strong>
+      <a href="https://fe2.update.microsoft.com/" target="_blank">Page d'accueil</a>
+    </li>
+  </ul>
+    </div>
+
+    <div *ngSwitchCase="'plan'">
+      <h2 class="section-title"><mat-icon>map</mat-icon> Plan d'accès</h2>
+      <div class="section-divider"></div>
+      <p class="content-text">Venez nous rendre visite à Aurillac ou Figeac.</p>
+    </div>
+
+    <div *ngSwitchCase="'contact'">
+      <h2 class="section-title"><mat-icon>mail</mat-icon> Nous contacter</h2>
+      <div class="section-divider"></div>
+      <p class="content-text">Utilisez les coordonnées ci-dessous pour nous joindre.</p>
+    </div>
+
+    <div *ngSwitchDefault>
+      <h2 class="section-title"><mat-icon>info</mat-icon> Bienvenue</h2>
+      <div class="section-divider"></div>
+      <p class="content-text">Sélectionnez une option dans le menu de gauche pour afficher les détails.</p>
+    </div>
+  </div>
+</main>
+
+  </div>
+  </mat-tab>
 
 
   <mat-tab label="Contact">
