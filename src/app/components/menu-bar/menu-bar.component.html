@@ -983,39 +983,18 @@
 </div>
 
 <div *ngSwitchCase="'contact'">
-  <h2 class="section-title"><mat-icon>email</mat-icon> Nous contacter</h2>
+  <h2 class="section-title"><mat-icon>mail</mat-icon> Nous contacter</h2>
   <div class="section-divider"></div>
 
-  <div class="contact-card">
-    <h3 class="section-subtitle">Informations de contact</h3>
-    <p class="content-text" style="margin-bottom: 25px;">
-      Si vous avez des questions, des remarques ou d'autres demandes de renseignements, n'hésitez pas à nous joindre :
-    </p>
+  <div class="contact-container">
+    <div class="contact-row">
+      <mat-icon>email</mat-icon>
+      <span><strong>Email:</strong> computech@computech.fr</span>
+    </div>
 
-    <div class="contact-details">
-      <div class="contact-item">
-        <mat-icon class="icon-blue">mail</mat-icon>
-        <div>
-          <span class="label">Par mail:</span><br>
-          <a href="mailto:computech@computech.fr">computech@computech.fr</a>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <mat-icon class="icon-blue">phone</mat-icon>
-        <div>
-          <span class="label">Par téléphone:</span><br>
-          <a href="tel:0471433535">04.71.43.35.35</a>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <mat-icon class="icon-blue">fax</mat-icon>
-        <div>
-          <span class="label">Par fax:</span><br>
-          <span>04.71.43.35.36</span>
-        </div>
-      </div>
+    <div class="contact-row">
+      <mat-icon>phone</mat-icon>
+      <span><strong>Téléphone:</strong> 04.71.43.35.35</span>
     </div>
   </div>
 </div>
