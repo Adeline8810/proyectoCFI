@@ -744,3 +744,54 @@ input {
     margin-bottom: 0;
   }
 }
+
+/* Limpieza de contenedores para evitar desbordamiento */
+.tab-content, .content-card {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 15px !important;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Regla universal para TODAS las imágenes dentro de contenido */
+.tab-content img, .content-card img {
+  max-width: 100%;
+  height: auto !important; /* Mantiene la proporción */
+  display: block;
+  margin: 10px auto;
+}
+
+/* Ajuste específico para tus contenedores de medios (el que falla) */
+.media-container {
+  display: flex !important;
+  flex-direction: column !important; /* Siempre columna en móvil */
+  width: 100% !important;
+}
+
+/* En escritorio, lo volvemos horizontal */
+@media (min-width: 768px) {
+  .media-container {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+  .media-image {
+    width: 300px !important;
+    margin-right: 20px;
+  }
+}
+
+/* Ajuste de la tarjeta principal para móviles */
+@media (max-width: 768px) {
+  .main-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
+  /* Asegurar que las listas no se salgan */
+  ul, ol {
+    padding-left: 20px !important;
+    word-break: break-word;
+  }
+}
