@@ -892,7 +892,13 @@ brand-main-image
   border: 1px solid #eeeeee;
   border-radius: 8px;
   overflow: hidden;
+  flex-direction: row;
+  width: 100%;
+
 }
+
+
+
 
 /* Barra lateral oscura y elegante */
 .sidebar {
@@ -975,3 +981,25 @@ brand-main-image
 }
 
 
+/* ESTO ES LO QUE ARREGLA EL CELULAR */
+@media (max-width: 768px) {
+  .computex-layout {
+    flex-direction: column; /* En móvil, la barra lateral pasa arriba y el contenido abajo */
+  }
+
+  .sidebar {
+    width: 100%; /* La barra lateral ocupa todo el ancho en móvil */
+  }
+
+  .content-view {
+    width: 100%; /* El contenido ocupa todo el ancho */
+    padding: 10px;
+  }
+}
+
+/* Evita que los textos largos fuercen el ancho de la pantalla */
+.content-card, .tab-content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
