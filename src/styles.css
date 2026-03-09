@@ -709,3 +709,38 @@ input {
     flex: 0 0 100%;         /* La imagen toma el ancho total en celular */
   }
 }
+
+/* Style par défaut pour mobile (Mobile First) */
+.media-container {
+  display: flex;
+  flex-direction: column; /* Empile l'image et le texte verticalement */
+  align-items: center;    /* Centre les éléments */
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.media-image {
+  width: 100%;            /* L'image prend toute la largeur du téléphone */
+  max-width: 400px;       /* Limite la taille sur très grand écran */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;    /* Espace entre l'image et le texte */
+}
+
+.media-content {
+  width: 100%;            /* Le texte prend toute la largeur */
+}
+
+/* Pour les écrans d'ordinateur (Desktop) */
+@media (min-width: 768px) {
+  .media-container {
+    flex-direction: row;  /* Remet l'image à gauche et le texte à droite */
+    align-items: flex-start;
+  }
+
+  .media-image {
+    width: 300px;         /* Taille fixe pour l'image sur desktop */
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
