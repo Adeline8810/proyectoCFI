@@ -982,18 +982,26 @@ brand-main-image
 
 
 /* ESTO ES LO QUE ARREGLA EL CELULAR */
+/* Ajuste para celulares */
 @media (max-width: 768px) {
   .computex-layout {
-    flex-direction: column; /* En móvil, la barra lateral pasa arriba y el contenido abajo */
+    flex-direction: column; /* Apila menú arriba y contenido abajo */
   }
 
   .sidebar {
-    width: 100%; /* La barra lateral ocupa todo el ancho en móvil */
+    width: 100%; /* El menú ocupa todo el ancho */
   }
 
   .content-view {
-    width: 100%; /* El contenido ocupa todo el ancho */
-    padding: 10px;
+    width: 100%; /* El contenido usa todo el ancho disponible */
+    padding: 15px; /* Espaciado para que no toque los bordes */
+    box-sizing: border-box; /* Importante para que el padding no desborde */
+  }
+
+  /* Centrar el contenido de las tarjetas */
+  .content-card {
+    margin: 10px 0;
+    width: 100%;
   }
 }
 

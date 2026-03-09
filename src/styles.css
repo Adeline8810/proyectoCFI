@@ -546,6 +546,10 @@ input {
   line-height: 1.6;
   color: #555;
   font-size: 1.05rem;
+
+  word-wrap: break-word; /* Rompe palabras largas */
+  overflow-wrap: break-word;
+  max-width: 100%; /* Asegura que el contenido nunca supere el ancho de pantalla */
 }
 
 .content-card {
