@@ -826,10 +826,20 @@
 
 /* --- Botón AnyDesk --- */
 .banner-button {
-  position: absolute;
-  right: 4%;
-  bottom: 8%;
+position: absolute;
+  right: 3%;
+  bottom: 3%; /* Prueba con un valor más pequeño para bajarlo más */
   z-index: 10;
+
+  /* Esto elimina márgenes automáticos que puedan estar interfiriendo */
+  margin: 0;
+  padding: 0;
+
+  /* Asegura que el botón no se deforme al moverse */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .banner-button img {
