@@ -169,12 +169,7 @@
 }
 
 /* Iconos */
-.contact-icon {
-  width: 32px;  /* Ajusta según necesites */
-  height: 32px;
-  display: block;
-  flex-shrink: 0; /* Evita que la imagen se deforme o cambie de tamaño */
-}
+/*retirado*/
 /* Link de email */
 .contact-item a {
   color: #1f4e79;
@@ -875,9 +870,11 @@
 }
 
 .contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 55px;
+  height: 55px;
   display: block; /* Importante para evitar espacios extra */
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 /* Esto evita que el contenido de las pestañas "empuje" al contenedor */

@@ -922,12 +922,7 @@ input {
 }
 
 /* Iconos - Tamaño aumentado */
-.contact-icon {
-  width: 40px;         /* Ajustado a 40px para mayor visibilidad */
-  height: 40px;
-  flex-shrink: 0;
-  object-fit: contain;
-}
+
 
 /* Texto */
 .contact-item div {
