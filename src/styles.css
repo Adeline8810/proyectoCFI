@@ -906,58 +906,55 @@ input {
    CONTACT SECTION CLEAN
 ================================= */
 
-.contact-content{
-  max-width:700px;
+/* Contenedor principal */
+.contact-content {
+  max-width: 700px;
 }
 
 /* Cada línea de contacto */
-.contact-item{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  padding:10px 0;
-  width:100%;
+.contact-item {
+  display: flex;
+  align-items: center; /* Alineación vertical centrada */
+  gap: 20px;           /* Mayor espacio entre icono y texto */
+  padding: 15px 0;     /* Mayor área de clic */
+  width: 100%;
 }
 
-/* Iconos */
-.contact-icon{
-  width:24px;
-  height:24px;
-  flex-shrink:0;
+/* Iconos - Tamaño aumentado */
+.contact-icon {
+  width: 40px;         /* Ajustado a 40px para mayor visibilidad */
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 /* Texto */
-.contact-item div{
-  flex:1;
-  line-height:1.5;
-  color:#334155;
-  font-size:1rem;
+.contact-item div {
+  flex: 1;
+  line-height: 1.6;
+  color: #334155;
+  font-size: 1.1rem;   /* Texto ligeramente más grande */
 }
 
 /* Email */
-.email-link{
-  color:#1e3a8a;
-  text-decoration:none;
-  font-weight:500;
+.email-link {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;    /* Un poco más de peso para resaltar */
 }
 
-.email-link:hover{
-  text-decoration:underline;
+.email-link:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
-@media (max-width:768px){
-
-  .contact-item{
-    align-items:flex-start;
+@media (max-width: 768px) {
+  .contact-item {
+    gap: 15px;
   }
 
-  .contact-icon{
-    margin-top:3px;
+  .contact-icon {
+    width: 32px;       /* Ajuste para móviles */
+    height: 32px;
   }
-
-  .contact-item div{
-    font-size:0.95rem;
-  }
-
 }

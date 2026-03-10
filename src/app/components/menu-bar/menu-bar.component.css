@@ -321,10 +321,31 @@
 
 
 /* IMAGENES CENTRADAS */
+/* Contenedor: Centra la imagen */
+/* Contenedor que centra la imagen */
 .brand-center-image {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 10px 0 !important;
+  padding: 0 !important;
+}
+
+/* La imagen de la impresora pequeña */
+.sharp-main-image {
+  width: 500px !important; /* Forzamos el tamaño pequeño */
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* Ajuste para que en móviles muy pequeños no se vea gigante */
+@media (max-width: 480px) {
+  .sharp-main-image {
+    width: 150px !important;
+  }
 }
 
 .brother-center-image {
@@ -353,15 +374,9 @@
 
 }
 
-brand-main-image
 
 
-.sharp-main-image {
-  max-width: 200px; /* ajusta este valor al tamaño deseado */
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+
 
 .tab-main-title {
   color: #1f4e79;
