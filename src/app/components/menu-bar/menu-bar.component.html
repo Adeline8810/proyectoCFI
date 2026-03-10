@@ -525,8 +525,6 @@
     <div class="sub-items" [class.show]="menuOpen === 'prod'">
       <button (click)="computexSection = 'materiel'"><mat-icon>desktop_windows</mat-icon> Matériel</button>
       <button (click)="computexSection = 'logiciel'"><mat-icon>apps</mat-icon> Logiciel</button>
-      <button (click)="computexSection = 'occasion'"><mat-icon>history</mat-icon> Occasion</button>
-      <button (click)="computexSection = 'gamesWorkshop'"><mat-icon>sports_esports</mat-icon> Games Workshop</button>
     </div>
   </div>
 
@@ -565,7 +563,6 @@
 
   <button class="group-btn" (click)="computexSection = 'plan'"><mat-icon>map</mat-icon><span>Plan d'accès</span></button>
   <button class="group-btn" (click)="computexSection = 'espace'"><mat-icon>lock</mat-icon><span>Espace réservé</span></button>
-  <button class="group-btn" (click)="computexSection = 'points'"><mat-icon>stars</mat-icon><span>Mes points</span></button>
   <button class="group-btn" (click)="computexSection = 'contact'"><mat-icon>mail</mat-icon><span>Nous contacter</span></button>
   <button class="group-btn" (click)="computexSection = 'forum'"><mat-icon>forum</mat-icon><span>Forum</span></button>
 </nav>
@@ -677,65 +674,7 @@
   </div>
 </div>
 
-<div *ngSwitchCase="'occasion'">
-  <h2 class="section-title"><mat-icon>history</mat-icon> Occasion</h2>
-  <div class="section-divider"></div>
 
-  <h3 class="section-subtitle"><mat-icon>build</mat-icon> Vente de jeux d'occasion PC et console:</h3>
-  <p style="font-size: 0.9em; font-style: italic;">(Dreamcast, Gameboy Color, Playstation2, Xbox...)</p>
-  <p class="content-text" style="text-align: justify;">
-    Si vous avez un jeu auquel vous ne jouez plus et que vous ne voulez pas le jeter, alors passez chez Computech Multimedia, on vous le rachète. Les jeux d'occasion sont nombreux et recouvrent une gamme complète. A des tout petits prix, vous pourrez retrouver vos anciens jeux favoris et recréer une logithèque digne de ce nom.
-  </p>
-
-  <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/occasion1.png" alt="Jeux d'occasion"
-         style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-
-  <h3 class="section-subtitle"><mat-icon>build</mat-icon> Montage de PC d'occasion pour les petits besoins ou les petits budgets:</h3>
-  <p class="content-text" style="text-align: justify;">
-    A partir de composants testés et certifiés, nos techniciens assemblent des unités centrales performantes et tout à fait convenables pour quelqu'un qui ne souhaite pas investir dans un PC neuf.
-  </p>
-
-  <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/occasion2.png" alt="PC d'occasion"
-         style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-</div>
-
-<div *ngSwitchCase="'gamesWorkshop'">
-  <h2 class="section-title"><mat-icon>sports_esports</mat-icon> Games Workshop</h2>
-  <div class="section-divider"></div>
-
-  <p class="content-text" style="text-align: justify;">
-    Warhammer est un jeu de guerre immersif et passionant avec figurines où de puissants guerriers combattent dans l'histoire du temps. A l'époque médiévale vous commandez votre propre armée de troupes endurcies, du soldat de l'empire aux trebuchets bretons en passant par les cavaliers, pour mener à bien votre quête et bâtir une véritable armée.
-  </p>
-  <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/warhammer1.png" alt="Warhammer combat" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-
-  <p class="content-text" style="text-align: justify;">
-    Vos forces sont représentées par des figurines de la gamme Citadel que vous peignez et assemblez vous même, il existe des milliers de références différentes, de véhicules et d'engins de guerre, ainsi vos tactiques ne seront limitées que par votre imagination !!!
-  </p>
-  <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/warhammer2.png" alt="Warhammer assemblage" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-
-  <p class="content-text" style="text-align: justify;">
-    Les livres d'armées et les codex vous renseigneront sur votre armée. Ils contiennent aussi des photos en couleur, des astuces de peinture et de modélisme, ainsi que des scénarios et des appendices contenant des règles additionnelles et des informations. Il vous parle également du Monde de Warhammer : ses nations, ses peuples et les créatures qui y vivent, ainsi que leur histoire. Vous deviendrez très vite incollable sur le monde Warhammer.
-  </p>
-  <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/warhammer3.png" alt="Livres Warhammer" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-
-  <p class="content-text" style="text-align: justify;">
-    Dans notre magasin vous trouverez des figurines, des accessoires, des livres et des guides... Tout pour bâtir progressivement votre armée et devenir un maître de Warhammer.
-  </p>
-  <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/warhammer4.png" alt="Magasin Warhammer" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-
-</div>
 
  <div *ngSwitchCase="'sav'">
   <h2 class="section-title"><mat-icon>handyman</mat-icon> Service Après-Vente</h2>
@@ -952,35 +891,6 @@
   </div>
 </div>
 
-
-<div *ngSwitchCase="'points'">
-  <h2 class="section-title"><mat-icon>stars</mat-icon> Mes points</h2>
-  <div class="section-divider"></div>
-
-  <div class="login-card">
-    <h3 class="section-subtitle"><mat-icon>account_balance_wallet</mat-icon> Accès fidélité</h3>
-
-    <p class="content-text" style="font-size: 0.9rem; color: #555; text-align: center; margin-bottom: 20px;">
-      Connectez-vous pour consulter votre solde de points et vos avantages.
-    </p>
-
-    <form class="login-form">
-      <div class="form-group">
-        <label for="username-points">Nom d'utilisateur :</label>
-        <input type="text" id="username-points" name="username" placeholder="Entrez votre nom">
-      </div>
-
-      <div class="form-group">
-        <label for="password-points">Mot de passe :</label>
-        <input type="password" id="password-points" name="password" placeholder="••••••••">
-      </div>
-
-      <button type="submit" class="btn-login">
-        <mat-icon>check_circle</mat-icon> Consulter mes points
-      </button>
-    </form>
-  </div>
-</div>
 
 <div *ngSwitchCase="'contact'">
   <h2 class="section-title"><mat-icon>mail</mat-icon> Nous contacter</h2>
