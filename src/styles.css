@@ -959,3 +959,42 @@ input {
   background-color: #d32f2f !important;
   color: white !important;
 }
+
+.video-container {
+  width: 100%;
+  max-width: 800px; /* Tamaño máximo en pantallas grandes */
+  margin: 20px auto; /* Centrado */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto; /* Mantiene la proporción original */
+  display: block;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+  .video-container {
+    width: 95%; /* Un poco más de margen en móviles */
+    margin: 10px auto;
+  }
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 600px; /* Ajusta este valor si lo quieres más grande o pequeño */
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  /* Eliminamos aspect-ratio para dejar que el video use sus propias dimensiones naturales */
+  display: block;
+  /* object-fit ya no es necesario si eliminamos el aspect-ratio fijo */
+}
