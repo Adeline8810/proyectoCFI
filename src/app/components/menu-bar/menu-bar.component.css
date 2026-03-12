@@ -1033,3 +1033,26 @@ position: absolute;
   word-wrap: break-word;
   word-break: break-word;
 }
+
+.video-wrapper {
+
+/* Reducimos el ancho máximo para que sea más pequeño */
+  max-width: 300px;
+  width: 90%;
+  margin: 20px auto;
+  border: 3px solid #677093;
+  border-radius: 10px; /* Bordes un poco menos redondeados para este tamaño */
+  overflow: hidden;
+  box-shadow: 0 3px 13px rgba(0,0,0,0.1);
+
+  /* Mantiene la proporción vertical */
+  aspect-ratio: 9 / 16;
+
+}
+
+/* Opcional: aseguramos que el video rellene el contenedor */
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
