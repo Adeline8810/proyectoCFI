@@ -1,0 +1,181 @@
+  <div class="tab-content">
+       <!-- <h2 class="tab-main-title">Présentation Informatique</h2> -->
+
+      <p>CFI, l'informatique en toute sérénité ! Nous offrons toute une gamme de prestations informatiques aux professionnels comme aux particuliers :</p>
+
+      <!-- Botón para mostrar Matériel -->
+    <div class="bureautique-menu">
+
+	 <button class="subtab-btn"
+              [class.active-subtab]="!showMaterial"
+              (click)="showMaterial = false; titleChanged.emit('Informatique')" >Informatique</button>
+
+
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showMaterial"
+              (click)="showMaterial = true; titleChanged.emit('Matériel')"> Matériel</button>
+
+
+
+    </div>
+
+      <!-- Contenido principal de Informatique -->
+      <div *ngIf="!showMaterial" class="brand-content-fade">
+
+        <div class="media-container">
+          <img src="assets/images/materiel.png" alt="material" class="media-image">
+          <div class="media-content">
+            <h3>MATERIEL INFORMATIQUE</h3>
+            <p>Vous cherchez du matériel informatique de qualité adapté à vos besoins ? Nous sommes à même de vous proposer des PCs bureautiques, gamers, stations de travail, serveurs, portables et ultra portables. Faites nous connaître votre ou vos besoins !</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/logiciel1.png" alt="logiciel1" class="media-image">
+          <div class="media-content">
+            <h3>LOGICIELS BUREAUTIQUE - GESTION</h3>
+            <p>Référencé chez la plupart des éditeurs de logiciels : bureautique, gestion, paie etc. Nous avons la solution que vous attendez. Dites nous ce que vous recherchez !</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/logiciel2.png" alt="logiciel2" class="media-image">
+          <div class="media-content">
+            <h3>LOGICIELS SPECIFIQUES</h3>
+            <p>Par l'intermédiaire de notre partenaire Eriidan qui a pour vocation de s'adresser aux PME ainsi qu'aux départements informatiques des grosses sociétés, des administrations et institutions pour leurs besoins informatiques spécifiques.</p>
+            <p>Cette équipe de professionnels vous offre des solutions sur mesure pour vos besoins de développement informatique :</p>
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+            <ul>
+              <li>Gestion de projet (encadrement, phase d'étude, cahier des charges, etc.)</li>
+              <li>Plusieurs langages de programmation</li>
+              <li>Bases de données</li>
+              <li>Tests et validation</li>
+              <li>Migrations de données</li>
+              <li>Formation et conseil</li>
+              <li>Assistance et maintenance</li>
+              <li>Audits</li>
+              <li>Expertises</li>
+            </ul>
+            </div>
+            <p>Pour répondre aux besoins spécifiques de chaque entreprise, nous assurons la conception et la réalisation sur mesure d'une partie ou de la totalité de votre système informatique avec la possibilité de se rattacher à un ou plusieurs prologiciels déjà existants.</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/maintenance.png" alt="maintenance" class="media-image">
+          <div class="media-content">
+            <h3>MAINTENANCE INFORMATIQUE</h3>
+            <p>Votre ordinateur fonctionne mal ou votre connexion ADSL est en panne ? Nous intervenons sur site dans les plus brefs délais (éventuellement dans le cadre d'un contrat d'assistance) car nous savons que pour vous, un outil informatique opérationnel est aujourd'hui vital pour être productif et concurrentiel !</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/formation.png" alt="formation" class="media-image">
+          <div class="media-content">
+            <h3>FORMATION INFORMATIQUE</h3>
+            <p>Vous avez besoin d'une formation pour prendre en main votre ordinateur ou pour vous perfectionner ? CFI est un Centre de Formation Agréé N° 83 15 00 494 15 et vous enseignera la bureautique (traitement de texte, tableur), la navigation sur internet ou l'utilisation de votre messagerie électronique, et plus particulièrement pour les professionnels.</p>
+          <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+            <ul>
+              <li>Gestion commerciale</li>
+              <li>Gestion de paie</li>
+              <li>Gestion d'encaissement</li>
+              <li>Gestion de production</li>
+              <li>Etc.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <img src="assets/images/logo_cfi.png" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>UN PARTENAIRE INFORMATIQUE</h3>
+            <p>Dans tous les domaines de l'informatique, CFI est votre partenaire pour vous conseiller et pour vous permettre d'aller de l'avant en toute sérénité ! N'hésitez pas à nous conctater, nous sommes à votre disposition afin de répondre et vous assister dans vos difficultés.....</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contenido Matériel -->
+      <div *ngIf="showMaterial"  class="brand-content-fade">
+        <!-- Tu contenido de Material aquí (no lo repito para abreviar) -->
+
+        <h3>Matériel informatique </h3>
+         <div class="materialInfo-center-image">
+         <img src="assets/images/materiel2.png"
+             alt="materiel2"
+             class="materialInfo-main-image">
+        </div>
+
+           <div class="media-container">
+          <img src="assets/images/logo_terra.png" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>TERRA</h3>
+             <div class="video-wrapper">
+             <video controls autoplay muted playsinline poster="assets/images/tu-imagen-de-portada.jpg">
+              <source src="assets/videos/pub-terra.mp4" type="video/mp4">
+              Tu navegador no soporta videos HTML5.
+            </video>
+            </div>
+
+            <p>TERRA, des solutions complètes répondant aux exigences les plus diverses :</p>
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+            <ul>
+              <li>PC Bureautique</li>
+              <li>PC Gamer</li>
+              <li>PC Portable</li>
+              <li>Client Léger</li>
+              <li>Station de Travail</li>
+              <li>Serveur</li>
+              <li>Ecran</li>
+              <li>et matériel divers</li>
+            </ul>
+            </div>
+<p>Les produits TERRA sont non seulement d'un rapport qualité/prix exceptionnel, mais ils se distinguent aussi par leur technologie d'exception et leur niveau de performance. Tout ce que à quoi un client exigeant comme vous peut s'attendre.</p>
+          </div>
+        </div>
+
+
+        <div class="media-container">
+          <img src="assets/images/logo_nec.png" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>NEC</h3>
+            <p>Les serveurs NEC sont parfaitement équipés pour faire fonctionner les applications informatiques allant des plus simples aux plus complexes (serveurs de fichiers, déploiement d’applications web/messagerie, infrastructure réseau, applications avec base de données (ERP/ CRM), applications métier, solution de virtualisation et consolidation…). Ils répondent aux besoins en constante évolution des petites et moyennes entreprises ainsi qu’aux grandes organisations notamment celle du secteur de la santé et de l’éducation.</p>
+            <p>Ils offrent un niveau de performance, une sécurité et une flexibilité jamais égalée dans cette gamme de prix, ils sont également plus économiques et plus simples à exploiter, intégrant en standard des systèmes RAID, ainsi que de véritables solutions d’administration.</p>
+            <p>La gamme serveur NEC répond parfaitement aux utilisateurs à la recherche de :</p>
+ <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+            <ul>
+              <li>Performance accrue</li>
+              <li>Sécurité et Disponibilité continue des applications</li>
+              <li>Flexibilité pour soutenir les évolutions des besoins</li>
+              <li>Maitrise des coûts, tels que les coûts de conception, planification, mise en place, matériels, logiciels, infrastructure, maintenance</li>
+              <li>Manageabilité pour facilité d'administration</li>
+            </ul>
+</div>
+          </div>
+        </div>
+
+          <div class="media-container">
+          <img src="assets/images/logo_toshiba.png" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>Toshiba</h3>
+            <p>Si au premier abord, tous les portables se ressemblent, leurs caractéristiques peuvent être très différentes et répondent à des usages spécifiques. Les portables Toshiba sont conçus pour répondre aux besoins des professionnels, des familles, mais aussi des étudiants ou encore des professionnels très mobiles.</p>
+
+          </div>
+        </div>
+
+           <div class="media-container">
+          <img src="assets/images/logo_samsung.png" alt="cfi_site" class="media-image">
+          <div class="media-content">
+            <h3>Samsung</h3>
+            <p>Samsung propose une gamme d'ordinateur portable variée, allant du mini notebook de 10 pouces jusqu'au 17 pouces, mais aussi de 1 à 3 Kg pour une capacité de stockage de 160 à 320 Go. Vous trouverez obligatoirement le PC que vous recherchez !</p>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>

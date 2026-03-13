@@ -1,0 +1,75 @@
+ <div class="tab-content" *ngIf="!showTools">
+
+      <h3>CONSEIL AVANT VENTE</h3>
+
+      <p>L'équipe technico-commerciale est à votre service pour vous aider à définir la meilleure solution à apporter à vos besoins en fonction des paramètres de votre société.</p>
+
+      <h3>INSTALLATION</h3>
+      <p>Nos techniciens prennent en charge toutes les phases de votre réalisation : Mise en place sur site</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li>Préparation en atelier pour les serveurs, postes et copieurs</li>
+        <li>Récupération de vos données</li>
+        <li>Installation des logiciels</li>
+        <li>Réalisation de tous les paramétrages</li>
+        <li>Mise en place sur site</li>
+      </ul>
+     </div>
+      <h3>ASSISTANCE CLIENT</h3>
+      <p>Nous avons mis en place un contrat d'assistance qui vous garantit X heures de technicien qualifié par mois pour vous apporter un réel confort et la tranquilité dans l'utilisation de votre outil informatique.</p>
+
+      <h3>SERVICE APRES VENTE</h3>
+      <p>Nos techniciens se forment régulièrement afin de vous apporter le meilleur service possible.</p>
+
+      <p>AnyDesk</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li><a href="https://get.anydesk.com/Mi0mk1AI/AnyDesk_QS.exe" target="_blank">Quick Support</a></li>
+        <li><a href="https://anydesk.com/fr/downloads/windows" target="_blank">Assistance en ligne</a></li>
+        <li><a href="https://anydesk.com/fr" target="_blank">AnyDesk, site officiel</a></li>
+      </ul>
+      </div>
+      <p>Un technicien vient chez vous en 10 secondes et vous apporte assistance sans que ayez à installer quoi que ce soit et en toute sécurité.</p>
+
+      <h3>DOMAINES</h3>
+      <p>Un certains nombre de domaines Internet en FR sont disponibles en ventes sur notre site web dédié.</p>
+
+      <h3>OUTILS</h3>
+      <p>Voici un ensemble d'informations utiles mises à votre disposition :</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+       <li><a href="#" (click)="showTools = 'ip';changeTitle('Adresse IP')">MON ADRESSE IP</a></li>
+        <p>Ce lien vous permet de connaître votre adresse IP publique - côté Internet.</p>
+        <li><a href="#" (click)="showTools = 'browser';changeTitle('Navigateur')">MON NAVIGATEUR WEB</a></li>
+        <p>Ce lien vous permet de connaître la dénomination de votre navigateur web - du point de vue des serveurs web.</p>
+      </ul>
+      </div>
+
+      <h3>TELEPHONIE</h3>
+      <p>Grâce à l'outil <strong>Centrex</strong>, nous pouvons fournir un service complet de téléphonie fixe et de flotte de portables, ainsi que les matériels nécessaires para la téléphonie et les liaisons fibres nécessaires.</p>
+
+
+
+
+</div>
+       <div *ngIf="showTools" class="tools-section">
+
+      <button class="subtab-btn" (click)="showTools = null;changeTitle('Services')">
+        ← Retour
+      </button>
+
+  <div *ngIf="showTools === 'ip'" class="tool-result-wrapper" >
+    <h3>Votre adresse</h3>
+    <p>L'adresse IP publique du routeur public le plus proche de la machine que vous utilisez actuellement est :</p>
+    <p class="info-box">80.11.234.191</p>
+  </div>
+
+  <div *ngIf="showTools === 'browser'" class="tool-result-wrapper" >
+    <h3>Votre navigateur</h3>
+    <p>La dénomination du navigateur que vous utilisez actuellement pour visualiser cette page est :</p>
+    <div class="info-box">
+      Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+    </div>
+  </div>
+
+</div>

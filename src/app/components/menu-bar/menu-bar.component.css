@@ -74,12 +74,37 @@
 /* =====================================================
    MEDIA CONTAINER - IMAGEN A LA IZQUIERDA Y TEXTO A LA DERECHA
    ===================================================== */
+
+
 .media-container {
   display: flex;            /* coloca imagen y texto en la misma fila */
   align-items: flex-start;  /* alinea al top */
   gap: 20px;                /* espacio entre imagen y texto */
   margin: 20px 0;
   flex-wrap: wrap;          /* en móvil, el texto baja debajo */
+}
+
+.media-image {
+  width: 200px;            /* Tamaño base */
+  height: auto;            /* Mantiene proporción */
+  border-radius: 10px;     /* Bordes redondeados */
+  object-fit: cover;       /* Recorte elegante */
+  filter: grayscale(20%);  /* Toque profesional */
+  transition: all 0.4s ease;
+  flex-shrink: 0;          /* Importante para que no se deforme en flexbox */
+}
+
+/* Efecto al pasar el mouse */
+.media-image:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* Ajuste específico para móvil (se mantiene igual que tenías) */
+@media (max-width: 768px) {
+  .media-image {
+    width: 80% !important; /* Forzamos para que sea responsivo */
+  }
 }
 
 /* Imagen dentro de media-container */
@@ -120,25 +145,6 @@
   }
 }
 
-
-.subtab-btn {
-  background-color: #1f4e79;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  transition: all 0.2s ease;
-}
-
-.subtab-btn:hover {
-  background-color: #163a5c;
-  transform: scale(1.05);
-}
-
-
-
 .mat-mdc-tab-body-wrapper .tab-content img.media-image {
   width: 120px;       /* ajusta al tamaño deseado */
   height: auto;       /* mantiene proporción */
@@ -169,8 +175,7 @@
 }
 
 /* Iconos */
-/*retirado*/
-/* Link de email */
+
 .contact-item a {
   color: #1f4e79;
   text-decoration: none;
@@ -181,29 +186,10 @@
   text-decoration: underline;
 }
 
-/* Para Triumph-Adler en Bureautique */
-.bureautique-full-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
 .full-image-container {
   width: 100%;
   max-width: 1200px; /* opcional: limita tamaño máximo */
 }
-
-.full-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain; /* mantiene proporción sin recortar */
-  display: block;
-}
-
-
 
 
 
@@ -317,7 +303,6 @@
 
 /* IMAGENES CENTRADAS */
 /* Contenedor: Centra la imagen */
-/* Contenedor que centra la imagen */
 .brand-center-image {
   display: flex !important;
   justify-content: center !important;
@@ -491,18 +476,7 @@
 
 
 /* === H3: El Subtítulo Profesional y "Bonito" === */
-.tab-content h3 {
-  color: #2c5282; /* Un azul un poco más vibrante pero serio */
-  font-size: 1.15rem; /* Tamaño contenido y elegante */
-  font-weight: 600;
-  margin: 30px 0 15px 0;
-  padding: 4px 12px;
-  background: linear-gradient(90deg, #f0f4f8 0%, rgba(255,255,255,0) 100%);
-  border-left: 4px solid #1f4e79; /* Un detalle de color firme */
-  display: inline-block; /* Para que el fondo no cruce toda la pantalla */
-  width: 100%; /* Opcional: quítalo si quieres que el fondo solo abrace el texto */
-  border-radius: 0 4px 4px 0;
-}
+
 
 .tab-content p, .tab-content ul {
   padding-left: 15px; /* Alineado con el inicio del texto del H3 */
@@ -683,17 +657,7 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra un poco más marcada */
 }
 
-.tab-content h3 {
-  color: #1f3a5f;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 30px 0 15px 0;
-  padding: 8px 15px;
-  border-left: 4px solid #1f4e79;
-  background: rgba(240, 244, 248, 0.6);
-  border-radius: 0 8px 8px 0;
-  transition: all 0.3s ease;
-}
+
 
 .tab-content h3:hover {
   background: rgba(240, 244, 248, 0.9);

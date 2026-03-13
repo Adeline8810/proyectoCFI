@@ -1,0 +1,120 @@
+<div class="tab-content">
+<!--<h2 class="tab-main-title">Bureautique</h2>-->
+    <!-- SUBMENU SIEMPRE VISIBLE -->
+    <div class="bureautique-menu">
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === null"
+              (click)="showBureautiqueOption = null;updateTitle('Bureautique')">
+        Bureautique
+      </button>
+
+
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === 'option2'"
+              (click)="showBureautiqueOption = 'option2';updateTitle('Brother')">Mainteneur Brother
+
+      </button>
+
+
+
+
+      <button class="subtab-btn"
+              [class.active-subtab]="showBureautiqueOption === 'option3'"
+              (click)="showBureautiqueOption = 'option3';updateTitle('Sharp')">Kyocera
+
+      </button>
+
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div *ngIf="showBureautiqueOption === null">
+
+      <p>Spécialisé dans l'environnement Bureautique, CFI propose à travers de ses compétences, une offre Multi-Produits, Multi-Marques, Multi-Services.
+      La gamme des produits proposés par CFI comprend tous les grands noms de la bureautique moderne.</p>
+<div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li>Mainteneur Brother</li>
+        <li>Kyocera</li>
+         <li>Olivetti</li>
+      </ul>
+</div>
+      <p>Les priorités de CFI :</p>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li>Être à l'écoute de vos besoins</li>
+        <li>Analyser et réfléchir à une solution</li>
+        <li>Vous proposer la meilleure solution pour votre entreprise</li>
+      </ul>
+</div>
+      <p>Avec CFI, la maintenance de votre parc est une garantie, nous sommes mainteneur agréé BROTHER, KYOCERA et OLIVETTI. Nous nous engageons à vous faire bénéficier :</p>
+     <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li>De toutes les garanties constructeurs</li>
+        <li>de toutes les extensions de garantie</li>
+        <li>D'interventions sur site avec une maintenance assurée par un technicien agréé et formé</li>
+      </ul>
+</div>
+    </div>
+
+    <!-- BROTHER -->
+    <div *ngIf="showBureautiqueOption === 'option2'" class="brand-section">
+
+      <h3>Brother </h3>
+
+      <div class="brother-center-image">
+        <img src="assets/images/bureautique2.png"
+             alt="bureautique2"
+             class="brand-main-image">
+      </div>
+
+      <div class="media-container">
+        <img src="assets/images/logo_brother.png" alt="logo_brother" class="media-image">
+        <div class="media-content">
+          <h3>Brother</h3>
+          <p>À l'heure du tout numérique et de la génération du tout écran, BROTHER invente et développe des produits pour que chacun puisse imprimer, numériser, télécopier, copier,
+          étiqueter... en somme laisser, sur le papier, sa plus belle empreinte possible.<br/>
+
+          Or vous n'imaginez pas ce qu'il y a derrière une empreinte BROTHER. Il y a des produits, des consommables et des services adaptés à chacun de nos clients. Il y a aussi des hommes et des femmes de talent, disponibles et attentifs. Il y a surtout une philosophie : « At your side ».</p>
+
+          <h3>« At your side » est bien plus qu'une profession de foi !</h3>
+          <p>C'est promouvoir une culture et une organisation d'entreprise entièrement tournée vers le client. C'est savoir recommander le bon produit et offrir des services à forte valeur ajoutée pour simplifier la vie des utilisateurs et maîtriser les coûts d'impression. C'est enfin imaginer toutes les solutions pour des produits sûrs et respectueux de l'environnement à chaque étape de leur cycle de vie.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SHARP -->
+    <div *ngIf="showBureautiqueOption === 'option3'">
+
+      <h3>Sharp</h3>
+
+      <div class="brand-center-image">
+        <img src="assets/images/imprimante.png"
+             alt="sharp"
+             class="sharp-main-image">
+      </div>
+
+      <div class="media-container">
+        <img src="assets/images/logo_sharp.png" alt="sharp" class="media-image">
+        <div class="media-content">
+          <h3>Présentation Sharp</h3>
+          <p>La clé de voute de la communication de votre organisation.</p>
+
+          <p>Du photocopieur A4 au A3, de l'impression monochrome à la couleur, de 15 pages par minute à 50 pages par minute :</p>
+<div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+          <ul>
+            <li>Productivité en impression et copie</li>
+            <li>Puissante numérisation réseau</li>
+            <li>Options de Finition professionnelles</li>
+            <li>Fonctions complètes de sécurité</li>
+            <li>Document filing (classement de documents)</li>
+          </ul>
+</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>

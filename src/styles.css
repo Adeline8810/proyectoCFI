@@ -14,22 +14,11 @@
 body, html {
   margin: 0;
   padding: 0;
-  /* min-height es vital para que el degradado ocupe toda la pantalla */
   min-height: 100vh;
   width: 100%;
-
-  /* Degradado: de Gris Plata (#d1d8e0) a Blanco (#ffffff)
-     Esto se notará mucho más que antes */
-  /*background: linear-gradient(180deg, #d1d8e0 0%, #ffffff 100%);*/
   background: linear-gradient(180deg, #b2b2b3 0%, #ffffff 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  font-family: 'Segoe UI', sans-serif;
-
-  /* Esto evita que el fondo se repita o se corte */
-
-  background-repeat: no-repeat;
-
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 /* Tarjeta centrada y limpia */
@@ -43,21 +32,19 @@ body, html {
   border-radius: 8px; /* Bordes redondeados solo abajo */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   min-height: 85vh;
-  margin-top: 0 !important; /* Elimina cualquier espacio arriba */
-
-  margin-top: 0 !important; /* Pega la tarjeta al tope */
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  margin-top: 0 ; /* Elimina cualquier espacio arriba */
+  border-top-left-radius: 0 ;
+  border-top-right-radius: 0 ;
 
 }
 
 @media (max-width: 768px) {
   .main-card {
-    width: 100% !important;   /* Ocupa el 100% real */
-    margin: 0 !important;     /* Elimina cualquier margen */
-    padding: 5px !important;  /* Padding mínimo para que el texto no toque el borde */
-    border-radius: 0 !important;
-    box-shadow: none !important; /* En móvil, la sombra es innecesaria */
+    width: 100% ;   /* Ocupa el 100% real */
+    margin: 0 ;     /* Elimina cualquier margen */
+    padding: 5px ;  /* Padding mínimo para que el texto no toque el borde */
+    border-radius: 0 ;
+    box-shadow: none ; /* En móvil, la sombra es innecesaria */
   }
 
   /* Ajuste del banner para que sea más estrecho y ocupe menos espacio vertical */
@@ -76,41 +63,11 @@ h1, h2, h3, h4, h5 {
    TABS ESTILO EMPRESARIAL
 ============================= */
 
-::ng-deep .mat-mdc-tab {
-  background: #e3edf7;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin: 0 6px;
-  transition: all 0.3s ease;
-}
 
-::ng-deep .mat-mdc-tab:hover {
-  background: #d0e2f2;
-  transform: translateY(-2px);
-}
 
-::ng-deep .mat-mdc-tab.mdc-tab--active {
-  background: linear-gradient(to right, #1e3a8a, #2563eb);
-  color: white !important;
-  font-weight: 600;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
-}
 
-::ng-deep .mat-mdc-tab .mdc-tab__content {
-  color: #1e3a8a !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 13px;
-}
 
-::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__content {
-  color: #fff !important;
-}
 
-::ng-deep .mat-mdc-tab .mdc-tab-indicator {
-  display: none !important;
-}
 
 /* =============================
    CONTENEDOR DE CONTENIDO
@@ -126,19 +83,10 @@ h1, h2, h3, h4, h5 {
   padding: 10px 5px !important; /* Muy poco padding en los lados */
   margin-top: 0 !important;
 
-
 }
 
-.mat-mdc-tab-group {
-  background-color: transparent;
-  border-radius: 12px 12px 0 0;
-  padding-top: 0.5rem;
-}
 
-::ng-deep .mat-mdc-tab-body-wrapper {
-  border-radius: 0 0 12px 12px;
-  background-color: #ffffff;
-}
+
 
 /* =============================
    DIALOG / FORMULARIO
@@ -310,9 +258,6 @@ input {
 .mat-mdc-tab.mdc-tab--active .mdc-tab__content .mdc-tab__text-label {
   color: #ffffff !important;
 }
-
-
-
 
 
 /* =============================
@@ -713,13 +658,7 @@ input {
 }
 
 /* Style par défaut pour mobile (Mobile First) */
-.media-container {
-  display: flex;
-  flex-direction: column; /* Empile l'image et le texte verticalement */
-  align-items: center;    /* Centre les éléments */
-  margin-bottom: 30px;
-  padding: 10px;
-}
+
 
 .media-image {
   width: 100%;            /* L'image prend toute la largeur du téléphone */
@@ -765,11 +704,6 @@ input {
 }
 
 /* Ajuste específico para tus contenedores de medios (el que falla) */
-.media-container {
-  display: flex !important;
-  flex-direction: column !important; /* Siempre columna en móvil */
-  width: 100% !important;
-}
 
 /* En escritorio, lo volvemos horizontal */
 @media (min-width: 768px) {
@@ -834,7 +768,7 @@ input {
 }
 
 /* Asegurar que las imágenes no rompan el layout */
-.media-container, .team-image-container {
+.team-image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -846,18 +780,7 @@ input {
    CONTACT SECTION CLEAN
 ================================= */
 
-.contact-content{
-  max-width:700px;
-}
 
-/* Cada línea de contacto */
-.contact-item{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  padding:10px 0;
-  width:100%;
-}
 
 /* Iconos */
 .contact-icon{
@@ -907,11 +830,6 @@ input {
    CONTACT SECTION CLEAN
 ================================= */
 
-/* Contenedor principal */
-.contact-content {
-  max-width: 700px;
-}
-
 /* Cada línea de contacto */
 .contact-item {
   display: flex;
@@ -956,8 +874,8 @@ input {
 }
 
 .error-snackbar {
-  background-color: #d32f2f !important;
-  color: white !important;
+  background-color: #d32f2f;
+  color: white ;
 }
 
 .video-container {

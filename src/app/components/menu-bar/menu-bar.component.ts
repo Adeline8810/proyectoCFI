@@ -11,13 +11,23 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialog } from '../../error-dialog/error-dialog';
 
+import { AccueilTab } from '../../components/accueil-tab/accueil-tab';
+import { ComputechTab } from '../../components/computech-tab/computech-tab';
+import { BureautiqueTab } from '../../components/bureautique-tab/bureautique-tab';
+import { ContactTab } from '../../components/contact-tab/contact-tab';
+import { EncaissementTab } from '../../components/encaissement-tab/encaissement-tab';
+import { InformatiqueTab } from '../../components/informatique-tab/informatique-tab';
+import { ServicesTab } from '../../components/services-tab/services-tab';
+
 // Registrar el locale francés
 registerLocaleData(localeFr);
-
+ContactTab
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
-  imports: [CommonModule, MatTabsModule, MatToolbarModule,MatIconModule,MatExpansionModule,MatSnackBarModule],
+  imports: [CommonModule, MatTabsModule, MatToolbarModule,MatIconModule,MatExpansionModule,MatSnackBarModule,
+    AccueilTab,ComputechTab,BureautiqueTab,ContactTab,EncaissementTab,InformatiqueTab,ServicesTab
+  ],
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.css'],
   encapsulation: ViewEncapsulation.None
