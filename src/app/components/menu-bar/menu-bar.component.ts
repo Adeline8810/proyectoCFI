@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation,Input  } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'; // 📌 Importa el locale francés
 import { MatTabsModule } from '@angular/material/tabs';
@@ -78,6 +78,15 @@ ngOnInit() {
 menuOpen: string = '';
 computexSection: string = 'accueil';
 errorLogin = true;
+
+  @Input() selectedIndex: number = 0;// 0 es Accueil, 6 es Contacto (basado en tu orden)
+
+  changeTab(index: number) {
+    this.selectedIndex = index;
+  }
+
+
+
 
 }
 

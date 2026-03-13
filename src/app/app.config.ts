@@ -4,6 +4,12 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
+
+
+// En app.config.ts, elimina el provideRouter
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter([]), provideHttpClient(), provideAnimationsAsync()]
+  providers: [
+    provideHttpClient(),
+    provideAnimationsAsync()
+  ]
 };

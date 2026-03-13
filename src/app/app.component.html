@@ -8,4 +8,10 @@
   </span>
 </mat-toolbar>
 
-<app-menu-bar></app-menu-bar>
+<app-menu-bar [selectedIndex]="selectedIndex"></app-menu-bar>
+
+
+
+<app-footer (navigate)="onFooterNavigate($event)"></app-footer>
+
+

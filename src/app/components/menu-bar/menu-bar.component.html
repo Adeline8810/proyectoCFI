@@ -22,7 +22,9 @@
 
 
 
-<mat-tab-group (selectedTabChange)="changeTitle($event.tab.textLabel)">
+<mat-tab-group
+  [(selectedIndex)]="selectedIndex"
+  (selectedTabChange)="changeTitle($event.tab.textLabel)">
 
 <mat-tab label="Accueil">
   <app-accueil-tab></app-accueil-tab>
