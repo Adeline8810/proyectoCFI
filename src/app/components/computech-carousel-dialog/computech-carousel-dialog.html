@@ -1,77 +1,11 @@
-<div class="computex-layout">
-
-    <aside class="sidebar">
-      <div class="sidebar-header">COMPUTECH</div>
-
-     <nav class="menu-list">
-  <button class="group-btn" (click)="openCarousel(0)">
-    <mat-icon>home</mat-icon> <span>Accueil</span>
+<div class="dialog-wrapper">
+ <button class="btn-close" mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
   </button>
 
-  <div class="menu-group">
-    <button class="group-btn" (click)="menuOpen = (menuOpen === 'ent' ? '' : 'ent')">
-      <mat-icon>corporate_fare</mat-icon> <span>Enterprise</span>
-      <mat-icon class="arrow">{{ menuOpen === 'ent' ? 'expand_less' : 'expand_more' }}</mat-icon>
-    </button>
-    <div class="sub-items" [class.show]="menuOpen === 'ent'">
-      <button (click)="openCarousel(1)"><mat-icon>groups</mat-icon> Le Personnel</button>
-      <button (click)="openCarousel(2)"><mat-icon>store</mat-icon> Le Magasin</button>
-    </div>
-  </div>
 
-  <div class="menu-group">
-    <button class="group-btn" (click)="menuOpen = (menuOpen === 'prod' ? '' : 'prod')">
-      <mat-icon>shopping_bag</mat-icon> <span>Les Produits</span>
-      <mat-icon class="arrow">{{ menuOpen === 'prod' ? 'expand_less' : 'expand_more' }}</mat-icon>
-    </button>
-    <div class="sub-items" [class.show]="menuOpen === 'prod'">
-      <button (click)="openCarousel(3)"><mat-icon>desktop_windows</mat-icon> Matériel</button>
-      <button (click)="openCarousel(4)"><mat-icon>apps</mat-icon> Logiciel</button>
-    </div>
-  </div>
-
-  <div class="menu-group">
-    <button class="group-btn" (click)="menuOpen = (menuOpen === 'serv' ? '' : 'serv')">
-      <mat-icon>plumbing</mat-icon> <span>Services</span>
-      <mat-icon class="arrow">{{ menuOpen === 'serv' ? 'expand_less' : 'expand_more' }}</mat-icon>
-    </button>
-    <div class="sub-items" [class.show]="menuOpen === 'serv'">
-      <button (click)="openCarousel(5)"><mat-icon>handyman</mat-icon> SAV</button>
-      <button (click)="openCarousel(6)"><mat-icon>router</mat-icon> Réseau</button>
-    </div>
-  </div>
-
-  <div class="menu-group">
-    <button class="group-btn" (click)="menuOpen = (menuOpen === 'dl' ? '' : 'dl')">
-      <mat-icon>download</mat-icon> <span>Téléchargement</span>
-      <mat-icon class="arrow">{{ menuOpen === 'dl' ? 'expand_less' : 'expand_more' }}</mat-icon>
-    </button>
-    <div class="sub-items" [class.show]="menuOpen === 'dl'">
-      <button (click)="openCarousel(7)"><mat-icon>settings_input_component</mat-icon> Pilotes</button>
-      <button (click)="openCarousel(8)"><mat-icon>construction</mat-icon> Utilitaires</button>
-    </div>
-  </div>
-
-  <div class="menu-group">
-    <button class="group-btn" (click)="menuOpen = (menuOpen === 'liens' ? '' : 'liens')">
-      <mat-icon>link</mat-icon> <span>Liens</span>
-      <mat-icon class="arrow">{{ menuOpen === 'liens' ? 'expand_less' : 'expand_more' }}</mat-icon>
-    </button>
-    <div class="sub-items" [class.show]="menuOpen === 'liens'">
-      <button (click)="openCarousel(9)"><mat-icon>business_center</mat-icon> Pros</button>
-      <button (click)="openCarousel(10)"><mat-icon>category</mat-icon> Divers</button>
-    </div>
-  </div>
-
-  <button class="group-btn"  (click)="openCarousel(11)"><mat-icon>map</mat-icon><span>Plan d'accès</span></button>
-  <button class="group-btn"  (click)="openCarousel(12)"><mat-icon>lock</mat-icon><span>Espace réservé</span></button>
-  <button class="group-btn"  (click)="openCarousel(13)"><mat-icon>mail</mat-icon><span>Nous contacter</span></button>
-  <button class="group-btn"  (click)="openCarousel(14)"><mat-icon>forum</mat-icon><span>Forum</span></button>
-</nav>
-    </aside>
-
-<main class="content-view">
-  <div [ngSwitch]="computexSection" class="content-card">
+<mat-dialog-content  class="custom-scroll">
+  <div [ngSwitch]="seccionActual" class="content-card">
 
     <div *ngSwitchCase="'accueil'">
       <h2 class="section-title"><mat-icon>home</mat-icon> Bienvenue sur Computech</h2>
@@ -83,10 +17,9 @@
            alt="Computech"
            style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </div>
-
     </div>
 
-   <div *ngSwitchCase="'personnel'">
+    <div *ngSwitchCase="'personnel'">
   <h2 class="section-title"><mat-icon>groups</mat-icon> Le Personnel</h2>
   <div class="section-divider"></div>
 
@@ -98,24 +31,21 @@
            style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </div>
 
-  </div>
-
-
-
   <div class="content-text" style="text-align: center; max-width: 600px; margin: 0 auto;">
     <p>Le personnel de Computech, c'est toute une équipe dynamique à votre service.</p>
   </div>
 
+  </div>
+   </div>
 
-</div>
 
-   <div *ngSwitchCase="'magasin'">
+     <div *ngSwitchCase="'magasin'">
   <h2 class="section-title"><mat-icon>store</mat-icon> Le Magasin</h2>
   <div class="section-divider"></div>
 
   <div style="text-align: center; margin: 20px 0;">
     <img src="assets/images/horaires.png" alt="Le Magasin Computech"
-         style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+         style="max-width: 100%; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
   </div>
 
   <div class="content-text" style="text-align: center; margin-top: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 8px;">
@@ -126,7 +56,7 @@
   </div>
 </div>
 
-<div *ngSwitchCase="'materiel'">
+   <div *ngSwitchCase="'materiel'">
   <h2 class="section-title"><mat-icon>desktop_windows</mat-icon> Matériel</h2>
   <div class="section-divider"></div>
 
@@ -148,7 +78,8 @@
   </div>
 </div>
 
-   <div *ngSwitchCase="'logiciel'">
+
+  <div *ngSwitchCase="'logiciel'">
   <h2 class="section-title"><mat-icon>apps</mat-icon> Logiciel</h2>
   <div class="section-divider"></div>
 
@@ -159,7 +90,7 @@
 
   <div style="text-align: center; margin: 20px 0;">
     <img src="assets/images/jeux.jfif" alt="Jeux vidéo"
-         style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         style="max-width: 100%; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 
   <h3 class="section-subtitle"><mat-icon>build</mat-icon> Vente de logiciels :</h3>
@@ -172,7 +103,7 @@
 
   <div style="text-align: center; margin: 20px 0;">
     <img src="assets/images/logiciel.jfif" alt="Logiciels"
-         style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         style="max-width: 100%; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 </div>
 
@@ -189,7 +120,7 @@
   </p>
 
   <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/sav.png" alt="Service Après-Vente" style="width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="assets/images/sav.png" alt="Service Après-Vente" style="max-width: 100%; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 </div>
 <div *ngSwitchCase="'reseau'">
@@ -199,7 +130,7 @@
   <h3 class="section-subtitle"><mat-icon>build</mat-icon> Un réseau local disponible :</h3>
 
   <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/images/salle.png" alt="Salle Réseau" style="width: 400px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="assets/images/salle.png" alt="Salle Réseau" style="max-width: 100%; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 
   <p class="content-text" style="text-align: justify;">
@@ -363,7 +294,7 @@
 
   <div class="map-container" style="text-align: center; margin-top: 30px;">
     <img src="assets/images/plan.png" alt="Plan d'accès Computech"
-         style="width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #3498db;">
+         style="max-width: 100% ; width: 100%;height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #3498db;">
   </div>
 </div>
 
@@ -442,6 +373,15 @@
       <p class="content-text">Sélectionnez une option dans le menu de gauche pour afficher les détails.</p>
     </div>
   </div>
-</main>
 
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <div class="dots-container">
+    <span *ngFor="let sec of secciones; let i = index"
+          class="dot"
+          [class.active]="i === indiceActual"
+          (click)="setStep(i)">
+    </span>
   </div>
+</mat-dialog-actions>
